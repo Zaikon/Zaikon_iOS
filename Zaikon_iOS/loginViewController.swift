@@ -8,10 +8,18 @@
 
 import UIKit
 
-class loginViewController: UIViewController {
+class loginViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        passwordTextField.secureTextEntry = true
+        makeLoginButton()
         
     }
 
@@ -19,5 +27,14 @@ class loginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func makeLoginButton() {
+        loginButton.layer.cornerRadius = 3
+    }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
 }
