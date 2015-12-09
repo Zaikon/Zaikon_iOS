@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */; };
-		D7A13ED21C10B2A700D1F963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ED11C10B2A700D1F963 /* ViewController.swift */; };
+		D7A13ED21C10B2A700D1F963 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ED11C10B2A700D1F963 /* IndexViewController.swift */; };
 		D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED31C10B2A700D1F963 /* Main.storyboard */; };
 		D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED61C10B2A800D1F963 /* Assets.xcassets */; };
 		D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED81C10B2A800D1F963 /* LaunchScreen.storyboard */; };
 		D7A13EE51C10B2A800D1F963 /* Zaikon_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13EE41C10B2A800D1F963 /* Zaikon_iOSTests.swift */; };
 		D7A13EF01C10B2A800D1F963 /* Zaikon_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13EEF1C10B2A800D1F963 /* Zaikon_iOSUITests.swift */; };
+		D7AFAECB1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7AFAECA1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg */; };
+		D7D426291C15D5BA00EA6F07 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D426271C15D5BA00EA6F07 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		D7A13ECC1C10B2A700D1F963 /* Zaikon_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaikon_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7A13ED11C10B2A700D1F963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7A13ED11C10B2A700D1F963 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		D7A13ED41C10B2A700D1F963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A13ED61C10B2A800D1F963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A13ED91C10B2A800D1F963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		D7A13EEB1C10B2A800D1F963 /* Zaikon_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zaikon_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13EEF1C10B2A800D1F963 /* Zaikon_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zaikon_iOSUITests.swift; sourceTree = "<group>"; };
 		D7A13EF11C10B2A800D1F963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7AFAECA1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "in_1507_uminofuta-photo1.jpg"; sourceTree = "<group>"; };
+		D7D426271C15D5BA00EA6F07 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D75CCA9A1C128F4300227B18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D75CCA9B1C128F4800227B18 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7A13ED11C10B2A700D1F963 /* IndexViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		D75CCA9C1C128F6200227B18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7D426271C15D5BA00EA6F07 /* CustomCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		D7A13EC31C10B2A700D1F963 = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */,
-				D7A13ED11C10B2A700D1F963 /* ViewController.swift */,
 				D7A13ED31C10B2A700D1F963 /* Main.storyboard */,
+				D75CCA9A1C128F4300227B18 /* Model */,
+				D75CCA9B1C128F4800227B18 /* View Controller */,
+				D75CCA9C1C128F6200227B18 /* View */,
+				D7AFAEC91C15DBEC001C0063 /* image */,
 				D7A13ED61C10B2A800D1F963 /* Assets.xcassets */,
 				D7A13ED81C10B2A800D1F963 /* LaunchScreen.storyboard */,
 				D7A13EDB1C10B2A800D1F963 /* Info.plist */,
@@ -123,6 +153,14 @@
 				D7A13EF11C10B2A800D1F963 /* Info.plist */,
 			);
 			path = Zaikon_iOSUITests;
+			sourceTree = "<group>";
+		};
+		D7AFAEC91C15DBEC001C0063 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				D7AFAECA1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +272,7 @@
 			files = (
 				D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */,
 				D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */,
+				D7AFAECB1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg in Resources */,
 				D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A13ED21C10B2A700D1F963 /* ViewController.swift in Sources */,
+				D7A13ED21C10B2A700D1F963 /* IndexViewController.swift in Sources */,
+				D7D426291C15D5BA00EA6F07 /* CustomCell.swift in Sources */,
 				D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +525,7 @@
 				D7A13EF61C10B2A800D1F963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7A13EF71C10B2A800D1F963 /* Build configuration list for PBXNativeTarget "Zaikon_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +534,7 @@
 				D7A13EF91C10B2A800D1F963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7A13EFA1C10B2A800D1F963 /* Build configuration list for PBXNativeTarget "Zaikon_iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +543,7 @@
 				D7A13EFC1C10B2A800D1F963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
