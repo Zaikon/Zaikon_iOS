@@ -16,7 +16,6 @@
 		D7A13EF01C10B2A800D1F963 /* Zaikon_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13EEF1C10B2A800D1F963 /* Zaikon_iOSUITests.swift */; };
 		D7AFAECB1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7AFAECA1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg */; };
 		D7D426291C15D5BA00EA6F07 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D426271C15D5BA00EA6F07 /* CustomCell.swift */; };
-		D7D4262A1C15D5BA00EA6F07 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D426281C15D5BA00EA6F07 /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		D7A13EF11C10B2A800D1F963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7AFAECA1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "in_1507_uminofuta-photo1.jpg"; sourceTree = "<group>"; };
 		D7D426271C15D5BA00EA6F07 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		D7D426281C15D5BA00EA6F07 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				D7D426271C15D5BA00EA6F07 /* CustomCell.swift */,
-				D7D426281C15D5BA00EA6F07 /* CustomCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,7 +272,6 @@
 			files = (
 				D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */,
 				D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */,
-				D7D4262A1C15D5BA00EA6F07 /* CustomCell.xib in Resources */,
 				D7AFAECB1C15DBFD001C0063 /* in_1507_uminofuta-photo1.jpg in Resources */,
 				D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */,
 			);

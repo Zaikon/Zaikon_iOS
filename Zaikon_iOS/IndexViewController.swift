@@ -16,12 +16,12 @@ class IndexViewController: UIViewController, UICollectionViewDelegate, UICollect
         // app title
         self.title = "ザイコン"
         
-        // register xib file
-        self.goodCollectionView.registerNib(UINib(nibName: "CustomCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
-        
         //delegate
         self.goodCollectionView.delegate = self
         self.goodCollectionView.dataSource = self
+        
+        //register class
+        goodCollectionView.registerClass(CustomCell.self, forCellWithReuseIdentifier: "CustomCell")
         
         // set initial methods
         self.view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
@@ -32,7 +32,6 @@ class IndexViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewWillAppear(animated)
         let lightBlue = UIColor(red: 75/256, green: 199/256, blue: 241/256, alpha: 1)
         self.navigationController!.navigationBar.barTintColor = lightBlue
-//        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Chalkduster", size: 25)!]
     }
 
@@ -51,23 +50,28 @@ class IndexViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let cellWidth = self.view.frame.size.width/2 - 6
+        let cellWidth = self.view.frame.size.width / 2 - 6
         let cellHeight = cellWidth * 5 / 4
         return CGSizeMake(cellWidth, cellHeight)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomCell", forIndexPath: indexPath) as! CustomCell
-        setgoodImage(cell)
+        makeCustomcellView(cell)
         return cell
      }
     
-    func setgoodImage(cell: CustomCell) {
-        let cellWidth = self.view.frame.size.width/2 - 6
-        cell.goodImage.image = UIImage(named: "in_1507_uminofuta-photo1.jpg")
-        cell.goodImage.contentMode = UIViewContentMode.ScaleAspectFill
-        cell.goodImage.clipsToBounds = true
-        cell.goodImage.frame.size = CGSizeMake(cellWidth, cellWidth)
+    func makeCustomcellView(cell: CustomCell) {
+        setgoodsImage(cell)
+    }
+    
+    func setgoodsImage(cell: CustomCell) {
+        let cellWidth = cell.frame.width
+        cell.goodsImageView.frame.size = CGSizeMake(cellWidth, cellWidth)
+        cell.goodsImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        cell.goodsImageView.clipsToBounds = true
+        cell.goodsImageView.image = UIImage(named: "in_1507_uminofuta-photo1.jpg")
+        cell.addSubview(cell.goodsImageView)
     }
 
 
