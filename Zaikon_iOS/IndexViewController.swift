@@ -30,7 +30,7 @@ class IndexViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let lightBlue = UIColor(red: 75/256, green: 199/256, blue: 241/256, alpha: 1)
+        let lightBlue = UIColor(red: 75/255, green: 199/255, blue: 241/255, alpha: 1)
         self.navigationController!.navigationBar.barTintColor = lightBlue
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Chalkduster", size: 25)!]
     }
@@ -40,7 +40,7 @@ class IndexViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func setCollectionView() {
-        self.goodCollectionView.backgroundColor = UIColor(red: 248/256, green: 248/256, blue: 248/256, alpha: 1)
+        self.goodCollectionView.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
     }
     
     
