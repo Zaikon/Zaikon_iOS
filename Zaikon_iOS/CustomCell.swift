@@ -13,18 +13,22 @@ class CustomCell: UICollectionViewCell {
     let goodsImageView = UIImageView()
     let plusButton = UIButton()
     let minusButton = UIButton()
-    let commnetLabel = UILabel()
     let unitLabel = UILabel()
     let goodsNumberLabel = UILabel()
+
+    let greyColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
+    let plusBtnColor = UIColor(red: 236/255, green: 0, blue: 20/255, alpha: 1)
+    let minusBtnColor = UIColor(red: 65/255, green: 187/255, blue: 237/255, alpha: 1)
+    let btnFont = UIFont(name: "HelveticaNeue", size: 40)
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         makeCellView()
-        makePlusButton()
-        makeMinusButton()
-        setLabel(commnetLabel, text: "あと", x: -25)
-        setLabel(unitLabel, text: "本", x: +25)
-        setGoodNumberLabel()
+        makeBtn(plusButton, title: "+", titleColor: plusBtnColor, x: 7)
+        makeBtn(minusButton, title: "−", titleColor: minusBtnColor,  x: 1)
+        makeUnitLabel()
+        makeGoodNumberLabel()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -33,65 +37,50 @@ class CustomCell: UICollectionViewCell {
 
     
     func makeCellView() {
-        self.backgroundColor = UIColor(red: 240/255, green: 250/255, blue: 255/255, alpha: 1)
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1).CGColor
+        self.layer.borderColor = greyColor.CGColor
     }
     
-    func makePlusButton() {
+    func makeBtn(button: UIButton, title:String, titleColor: UIColor,x: CGFloat) {
         let length = self.frame.width * 1 / 4
-        let pointX = self.frame.width * 1 / 8
+        let pointX = self.frame.width * x / 8
         let pointY = self.frame.height * 9 / 10
         
-        plusButton.frame.size = CGSizeMake(length, length)
-        plusButton.center = CGPointMake(pointX, pointY)
-        plusButton.setTitle("+", forState: .Normal)
-        plusButton.setTitleColor(UIColor(red: 65/255, green: 187/255, blue: 237/255, alpha: 1), forState: .Normal)
-        plusButton.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 40)
-        self.addSubview(plusButton)
+        button.frame.size = CGSizeMake(length, length)
+        button.center = CGPointMake(pointX, pointY)
+        button.layer.borderColor = greyColor.CGColor
+        button.layer.borderWidth = 1
+        button.setTitle(title, forState: .Normal)
+        button.setTitleColor(titleColor, forState: .Normal)
+        button.setTitleColor(greyColor, forState: .Selected)
+        button.titleLabel?.font = btnFont
+        self.addSubview(button)
     }
     
-    func makeMinusButton() {
-        let length = self.frame.width * 1 / 4
-        let pointX = self.frame.width * 3 / 8
-        let pointY = self.frame.height * 9 / 10
-        
-        minusButton.frame.size = CGSizeMake(length, length)
-        minusButton.center = CGPointMake(pointX, pointY)
-        minusButton.setTitle("−", forState: .Normal)
-        minusButton.setTitleColor(UIColor(red: 236/255, green: 0/255, blue: 12/255, alpha: 1), forState: .Normal)
-        minusButton.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 40)
-        self.addSubview(minusButton)
-    }
-    
-    func setGoodNumberLabel() {
+    func makeGoodNumberLabel() {
         let length = self.frame.height * 1 / 4
-        let pointX = self.frame.width * 3 / 4
+        let pointX = self.frame.width * 1 / 2
         let pointY = self.frame.height * 9 / 10
         
         goodsNumberLabel.frame.size = CGSizeMake(length, length)
         goodsNumberLabel.center = CGPointMake(pointX, pointY)
-        goodsNumberLabel.text = "10"
         goodsNumberLabel.textAlignment = NSTextAlignment.Center
         goodsNumberLabel.textColor = UIColor.blackColor()
-        goodsNumberLabel.font = UIFont(name: "Helvetica-Bold", size: 30)
+        goodsNumberLabel.font = UIFont(name: "Helvetica-Bold", size: 25)
         self.addSubview(goodsNumberLabel)
     }
     
-    
-    
-    func setLabel(label: UILabel, text: String, x: CGFloat) {
-        let length = self.frame.width * 1 / 4
-        let pointX = self.frame.width *  3 / 4  +  x
-        let pointY = self.frame.height * 9 / 10 + 10
+    func makeUnitLabel() {
+        let length = self.frame.width * 1 / 2
+        let pointX = self.frame.width *  1 / 2  -  3
+        let pointY = self.frame.height * 9 / 10 + 5
         
-        label.frame.size = CGSizeMake(length, length)
-        label.center = CGPointMake(pointX, pointY)
-        label.text = text
-        label.textAlignment = NSTextAlignment.Center
-        label.textColor = UIColor.blackColor()
-        label.font = UIFont(name: "Helvetica-Bold", size: 10)
-        self.addSubview(label)
+        unitLabel.frame.size = CGSizeMake(length, length)
+        unitLabel.center = CGPointMake(pointX, pointY)
+        unitLabel.text = "あと             本"
+        unitLabel.textAlignment = NSTextAlignment.Center
+        unitLabel.textColor = UIColor.blackColor()
+        unitLabel.font = UIFont(name: "Helvetica-Bold", size: 10)
+        self.addSubview(unitLabel)
     }
-
 }
