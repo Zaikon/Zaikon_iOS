@@ -70,7 +70,7 @@ class IndexViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.goodsImageView.frame.size = CGSizeMake(cellWidth, cellWidth)
         cell.goodsImageView.contentMode = UIViewContentMode.ScaleAspectFill
         cell.goodsImageView.clipsToBounds = true
-        cell.goodsImageView.image = UIImage(named: "in_1507_uminofuta-photo1.jpg")
+        cell.goodsImageView.image = UIImage(named: "akiko.jpg")
         cell.addSubview(cell.goodsImageView)
     }
 
