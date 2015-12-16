@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Index View Controller-->
+        <!--Category View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="IndexViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="CategoryViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,45 +17,11 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E3i-iY-tAP">
-                                <rect key="frame" x="5" y="64" width="365" height="603"/>
-                                <animations/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zPs-ap-GmC">
-                                    <size key="itemSize" width="174" height="164"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pp2-mf-eWB">
-                                        <rect key="frame" x="0.0" y="0.0" width="174" height="164"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="174" height="164"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <animations/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="E3i-iY-tAP" secondAttribute="trailing" constant="5" id="QdB-ak-a0m"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E3i-iY-tAP" secondAttribute="bottom" id="ZeV-Px-AdS"/>
-                            <constraint firstItem="E3i-iY-tAP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="v3e-gw-6BB"/>
-                            <constraint firstItem="E3i-iY-tAP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xlg-rU-G1I"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6tq-qp-gka"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="goodCollectionView" destination="E3i-iY-tAP" id="Itm-YW-v6w"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +30,7 @@
         <!--Login View Controller-->
         <scene sceneID="oPW-G9-umQ">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0OW-QO-b9p" customClass="loginViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0OW-QO-b9p" customClass="LoginViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LcZ-MQ-Jih"/>
                         <viewControllerLayoutGuide type="bottom" id="BZP-kD-27W"/>
@@ -194,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPu-O8-zhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148.5" y="394.5"/>
+            <point key="canvasLocation" x="47.5" y="464.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hol-Gq-2hr">
