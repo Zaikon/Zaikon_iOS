@@ -7,11 +7,10 @@
 //
 
 import UIKit
+import Alamofire // Alamofireをimport
+import SwiftyJSON
 
 class CategoryViewController: UIViewController {
-
-    let lightBlue = UIColor(red: 75/255, green: 199/255, blue: 241/255, alpha: 1)
-    let lightGrey = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
     var pageMenu : CAPSPageMenu?
 
     override func viewDidLoad() {
@@ -24,26 +23,34 @@ class CategoryViewController: UIViewController {
         
         var controllerArray : [UIViewController] = []
         
-        let controller1 :GoodsViewController = GoodsViewController(nibName: "GoodsViewController", bundle: nil)
+        let controller1 :GoodsViewController = GoodsViewController()
         controller1.title = "ドリンク"
+        controller1.view.frame = self.view.frame
         controllerArray.append(controller1)
+        print("CategoryViewController")
+        print(self.view.frame)
+        print("GoodsViewController")
+        print(controller1.view.frame)
+    
         
-        let controller2 :GoodsViewController = GoodsViewController(nibName: "GoodsViewController", bundle: nil)
-        controller2.title = "食べ物"
-        controllerArray.append(controller2)
-        
-        let controller3 :GoodsViewController = GoodsViewController(nibName: "GoodsViewController", bundle: nil)
-        controller3.title = "その他"
-        controllerArray.append(controller3)
+//        let controller2 :GoodsViewController = GoodsViewController(nibName: "GoodsViewController", bundle: nil)
+//        controller2.title = "食べ物"
+//        controller2.view.frame = self.view.frame
+//        controllerArray.append(controller2)
+//        
+//        let controller3 :GoodsViewController = GoodsViewController(nibName: "GoodsViewController", bundle: nil)
+//        controller3.title = "その他"
+//        controller3.view.frame = self.view.frame
+//        controllerArray.append(controller3)
         
         let arrayNum = controllerArray.count
         let menuWidth = self.view.frame.width / CGFloat(arrayNum)
         let parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor.whiteColor()),
-            .SelectedMenuItemLabelColor(lightBlue),
-            .ViewBackgroundColor(lightGrey),
-            .SelectionIndicatorColor(lightBlue),
-            .SelectedMenuItemLabelColor(lightBlue),
+            .SelectedMenuItemLabelColor(UIColor.lightBlue()),
+            .ViewBackgroundColor(UIColor.lightGrey()),
+            .SelectionIndicatorColor(UIColor.lightBlue()),
+            .SelectedMenuItemLabelColor(UIColor.lightBlue()),
             .UnselectedMenuItemLabelColor(UIColor.blackColor()),
             .MenuItemFont(UIFont(name: "Chalkduster", size: 13.0)!),
             .MenuHeight(30.0),
@@ -63,7 +70,7 @@ class CategoryViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController!.navigationBar.barTintColor = lightBlue
+        self.navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Chalkduster", size: 25)!]
     }
 

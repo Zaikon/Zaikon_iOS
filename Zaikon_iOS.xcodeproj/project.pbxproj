@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */; };
 		D7026AE81C2090AF00C14DEF /* GoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */; };
-		D7026AE91C2090AF00C14DEF /* GoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */; };
 		D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */; };
+		D761DD3F1C21D0C6008C09CB /* UIColoer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761DD3E1C21D0C6008C09CB /* UIColoer+Extension.swift */; };
 		D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */; };
 		D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */; };
 		D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED31C10B2A700D1F963 /* Main.storyboard */; };
@@ -49,8 +49,8 @@
 		1BE6468DECABD2921CEAB7B9 /* Pods_Zaikon_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zaikon_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsViewController.swift; sourceTree = "<group>"; };
-		D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsViewController.xib; sourceTree = "<group>"; };
 		D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCollectionView.swift; sourceTree = "<group>"; };
+		D761DD3E1C21D0C6008C09CB /* UIColoer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColoer+Extension.swift"; sourceTree = "<group>"; };
 		D7A13ECC1C10B2A700D1F963 /* Zaikon_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaikon_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 				D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */,
 				D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */,
 				D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */,
-				D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -133,6 +132,14 @@
 				D7D426271C15D5BA00EA6F07 /* CustomCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		D761DD3D1C21D090008C09CB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D761DD3E1C21D0C6008C09CB /* UIColoer+Extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		D7A13EC31C10B2A700D1F963 = {
@@ -166,6 +173,7 @@
 				D75CCA9A1C128F4300227B18 /* Model */,
 				D75CCA9B1C128F4800227B18 /* View Controller */,
 				D75CCA9C1C128F6200227B18 /* View */,
+				D761DD3D1C21D090008C09CB /* Extension */,
 				D7AFAEC91C15DBEC001C0063 /* image */,
 				D7A13ED61C10B2A800D1F963 /* Assets.xcassets */,
 				D7A13ED81C10B2A800D1F963 /* LaunchScreen.storyboard */,
@@ -324,7 +332,6 @@
 				D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */,
 				D7AF5EFE1C17EB7300FC20DF /* key_icon.png in Resources */,
 				D7AF5EFD1C17EB7300FC20DF /* mail_icon.png in Resources */,
-				D7026AE91C2090AF00C14DEF /* GoodsViewController.xib in Resources */,
 				D7BF08791C1C2DF3005ABDFB /* akiko.jpg in Resources */,
 				D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */,
 				D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */,
@@ -406,6 +413,7 @@
 				D7026AE81C2090AF00C14DEF /* GoodsViewController.swift in Sources */,
 				D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */,
 				D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */,
+				D761DD3F1C21D0C6008C09CB /* UIColoer+Extension.swift in Sources */,
 				D7D426291C15D5BA00EA6F07 /* CustomCell.swift in Sources */,
 				D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */,
 			);

@@ -16,7 +16,6 @@ class CustomCell: UICollectionViewCell {
     let unitLabel = UILabel()
     let goodsNumberLabel = UILabel()
 
-    let greyColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
     let plusBtnColor = UIColor(red: 236/255, green: 0, blue: 20/255, alpha: 1)
     let minusBtnColor = UIColor(red: 65/255, green: 187/255, blue: 237/255, alpha: 1)
     let btnFont = UIFont(name: "HelveticaNeue", size: 40)
@@ -38,7 +37,7 @@ class CustomCell: UICollectionViewCell {
     
     func makeCellView() {
         self.layer.borderWidth = 1
-        self.layer.borderColor = greyColor.CGColor
+        self.layer.borderColor = UIColor.lightGrey().CGColor
     }
     
     func makeBtn(button: UIButton, title:String, titleColor: UIColor,x: CGFloat) {
@@ -48,11 +47,11 @@ class CustomCell: UICollectionViewCell {
         
         button.frame.size = CGSizeMake(length, length)
         button.center = CGPointMake(pointX, pointY)
-        button.layer.borderColor = greyColor.CGColor
+        button.layer.borderColor = UIColor.lightGrey().CGColor
         button.layer.borderWidth = 1
         button.setTitle(title, forState: .Normal)
         button.setTitleColor(titleColor, forState: .Normal)
-        button.setTitleColor(greyColor, forState: .Selected)
+        button.setTitleColor(UIColor.lightGrey(), forState: .Selected)
         button.titleLabel?.font = btnFont
         self.addSubview(button)
     }

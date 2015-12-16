@@ -12,6 +12,9 @@ class GoodsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("GoodsViewController")
+        print(self.view.frame)
         setGoodsCollectionView()
     }
 
@@ -30,7 +33,7 @@ class GoodsViewController: UIViewController {
         layout.minimumLineSpacing = 1
         
         let goodsCollectionView = GoodsCollectionView(frame: frame, collectionViewLayout: layout)
-        goodsCollectionView.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        goodsCollectionView.backgroundColor = UIColor.lightGrey()
         self.view.addSubview(goodsCollectionView)
     }
 }
