@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D750CA251C1D2BE000190ED0 /* coloerdPlusBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D750CA231C1D2BE000190ED0 /* coloerdPlusBtn.png */; };
-		D750CA261C1D2BE000190ED0 /* coloredMinusBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D750CA241C1D2BE000190ED0 /* coloredMinusBtn.png */; };
-		D750CA2D1C1D2C7F00190ED0 /* minusBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D750CA2B1C1D2C7F00190ED0 /* minusBtn.png */; };
-		D750CA2E1C1D2C7F00190ED0 /* plusBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D750CA2C1C1D2C7F00190ED0 /* plusBtn.png */; };
+		D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */; };
+		D7026AE81C2090AF00C14DEF /* GoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */; };
+		D7026AE91C2090AF00C14DEF /* GoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */; };
+		D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */; };
 		D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */; };
-		D7A13ED21C10B2A700D1F963 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ED11C10B2A700D1F963 /* IndexViewController.swift */; };
+		D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */; };
 		D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED31C10B2A700D1F963 /* Main.storyboard */; };
 		D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED61C10B2A800D1F963 /* Assets.xcassets */; };
 		D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED81C10B2A800D1F963 /* LaunchScreen.storyboard */; };
 		D7A13EE51C10B2A800D1F963 /* Zaikon_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13EE41C10B2A800D1F963 /* Zaikon_iOSTests.swift */; };
 		D7A13EF01C10B2A800D1F963 /* Zaikon_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13EEF1C10B2A800D1F963 /* Zaikon_iOSUITests.swift */; };
-		D7AF5EFA1C17E99400FC20DF /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF5EF91C17E99400FC20DF /* loginViewController.swift */; };
+		D7AF5EFA1C17E99400FC20DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */; };
 		D7AF5EFD1C17EB7300FC20DF /* mail_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFB1C17EB7300FC20DF /* mail_icon.png */; };
 		D7AF5EFE1C17EB7300FC20DF /* key_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFC1C17EB7300FC20DF /* key_icon.png */; };
 		D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */; };
@@ -44,13 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D750CA231C1D2BE000190ED0 /* coloerdPlusBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coloerdPlusBtn.png; sourceTree = "<group>"; };
-		D750CA241C1D2BE000190ED0 /* coloredMinusBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coloredMinusBtn.png; sourceTree = "<group>"; };
-		D750CA2B1C1D2C7F00190ED0 /* minusBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minusBtn.png; path = ../minusBtn.png; sourceTree = "<group>"; };
-		D750CA2C1C1D2C7F00190ED0 /* plusBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plusBtn.png; path = ../plusBtn.png; sourceTree = "<group>"; };
+		D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
+		D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsViewController.swift; sourceTree = "<group>"; };
+		D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsViewController.xib; sourceTree = "<group>"; };
+		D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCollectionView.swift; sourceTree = "<group>"; };
 		D7A13ECC1C10B2A700D1F963 /* Zaikon_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaikon_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7A13ED11C10B2A700D1F963 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		D7A13ED41C10B2A700D1F963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A13ED61C10B2A800D1F963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A13ED91C10B2A800D1F963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		D7A13EEB1C10B2A800D1F963 /* Zaikon_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zaikon_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13EEF1C10B2A800D1F963 /* Zaikon_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zaikon_iOSUITests.swift; sourceTree = "<group>"; };
 		D7A13EF11C10B2A800D1F963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7AF5EF91C17E99400FC20DF /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D7AF5EFB1C17EB7300FC20DF /* mail_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_icon.png; sourceTree = "<group>"; };
 		D7AF5EFC1C17EB7300FC20DF /* key_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_icon.png; sourceTree = "<group>"; };
 		D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zaikon_icon.gif; sourceTree = "<group>"; };
@@ -104,8 +104,10 @@
 		D75CCA9B1C128F4800227B18 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D7A13ED11C10B2A700D1F963 /* IndexViewController.swift */,
-				D7AF5EF91C17E99400FC20DF /* loginViewController.swift */,
+				D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */,
+				D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */,
+				D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */,
+				D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -113,7 +115,8 @@
 		D75CCA9C1C128F6200227B18 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D7BF087A1C1C3746005ABDFB /* indexView */,
+				D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */,
+				D7D426271C15D5BA00EA6F07 /* CustomCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 		D7A13ECE1C10B2A700D1F963 /* Zaikon_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */,
 				D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */,
 				D7A13ED31C10B2A700D1F963 /* Main.storyboard */,
 				D75CCA9A1C128F4300227B18 /* Model */,
@@ -175,24 +179,12 @@
 		D7AFAEC91C15DBEC001C0063 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				D750CA2B1C1D2C7F00190ED0 /* minusBtn.png */,
-				D750CA2C1C1D2C7F00190ED0 /* plusBtn.png */,
-				D750CA231C1D2BE000190ED0 /* coloerdPlusBtn.png */,
-				D750CA241C1D2BE000190ED0 /* coloredMinusBtn.png */,
 				D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */,
 				D7AF5EFB1C17EB7300FC20DF /* mail_icon.png */,
 				D7AF5EFC1C17EB7300FC20DF /* key_icon.png */,
 				D7BF08781C1C2DF3005ABDFB /* akiko.jpg */,
 			);
 			name = image;
-			sourceTree = "<group>";
-		};
-		D7BF087A1C1C3746005ABDFB /* indexView */ = {
-			isa = PBXGroup;
-			children = (
-				D7D426271C15D5BA00EA6F07 /* CustomCell.swift */,
-			);
-			name = indexView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,13 +297,10 @@
 				D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */,
 				D7AF5EFE1C17EB7300FC20DF /* key_icon.png in Resources */,
 				D7AF5EFD1C17EB7300FC20DF /* mail_icon.png in Resources */,
+				D7026AE91C2090AF00C14DEF /* GoodsViewController.xib in Resources */,
 				D7BF08791C1C2DF3005ABDFB /* akiko.jpg in Resources */,
 				D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */,
-				D750CA251C1D2BE000190ED0 /* coloerdPlusBtn.png in Resources */,
-				D750CA261C1D2BE000190ED0 /* coloredMinusBtn.png in Resources */,
-				D750CA2D1C1D2C7F00190ED0 /* minusBtn.png in Resources */,
 				D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */,
-				D750CA2E1C1D2C7F00190ED0 /* plusBtn.png in Resources */,
 				D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,8 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7AF5EFA1C17E99400FC20DF /* loginViewController.swift in Sources */,
-				D7A13ED21C10B2A700D1F963 /* IndexViewController.swift in Sources */,
+				D7AF5EFA1C17E99400FC20DF /* LoginViewController.swift in Sources */,
+				D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */,
+				D7026AE81C2090AF00C14DEF /* GoodsViewController.swift in Sources */,
+				D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */,
+				D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */,
 				D7D426291C15D5BA00EA6F07 /* CustomCell.swift in Sources */,
 				D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */,
 			);
