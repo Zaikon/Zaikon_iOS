@@ -10,7 +10,6 @@ import UIKit
 
 class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
     let cellMargin: CGFloat = 5.0
-    let lightGreyColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 0.5)
     var goodsNumber = 0
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -29,7 +28,7 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
 
     
     func setCollectionView() {
-        self.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        self.backgroundColor = UIColor.lightGrey()
     }
     
     // collectionView setting

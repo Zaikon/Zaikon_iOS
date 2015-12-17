@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */; };
 		D7026AE81C2090AF00C14DEF /* GoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */; };
-		D7026AE91C2090AF00C14DEF /* GoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */; };
 		D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */; };
+		D761DD3F1C21D0C6008C09CB /* UIColoer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761DD3E1C21D0C6008C09CB /* UIColoer+Extension.swift */; };
 		D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */; };
 		D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */; };
 		D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED31C10B2A700D1F963 /* Main.storyboard */; };
@@ -24,6 +24,7 @@
 		D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */; };
 		D7BF08791C1C2DF3005ABDFB /* akiko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7BF08781C1C2DF3005ABDFB /* akiko.jpg */; };
 		D7D426291C15D5BA00EA6F07 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D426271C15D5BA00EA6F07 /* CustomCell.swift */; };
+		E4B7893046E7C97AB877B3F5 /* Pods_Zaikon_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE6468DECABD2921CEAB7B9 /* Pods_Zaikon_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AB8AF4184292E1D04BEDC74 /* Pods-Zaikon_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaikon_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zaikon_iOS/Pods-Zaikon_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		1BE6468DECABD2921CEAB7B9 /* Pods_Zaikon_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zaikon_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsViewController.swift; sourceTree = "<group>"; };
-		D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsViewController.xib; sourceTree = "<group>"; };
 		D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCollectionView.swift; sourceTree = "<group>"; };
+		D761DD3E1C21D0C6008C09CB /* UIColoer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColoer+Extension.swift"; sourceTree = "<group>"; };
 		D7A13ECC1C10B2A700D1F963 /* Zaikon_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaikon_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zaikon_icon.gif; sourceTree = "<group>"; };
 		D7BF08781C1C2DF3005ABDFB /* akiko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akiko.jpg; sourceTree = "<group>"; };
 		D7D426271C15D5BA00EA6F07 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		FFEDAB4FBA6853B5EC919281 /* Pods-Zaikon_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaikon_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zaikon_iOS/Pods-Zaikon_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B7893046E7C97AB877B3F5 /* Pods_Zaikon_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		568EA04450348CC9B4832043 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFEDAB4FBA6853B5EC919281 /* Pods-Zaikon_iOS.debug.xcconfig */,
+				1AB8AF4184292E1D04BEDC74 /* Pods-Zaikon_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D75CCA9A1C128F4300227B18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +121,6 @@
 				D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */,
 				D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */,
 				D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */,
-				D7026AE71C2090AF00C14DEF /* GoodsViewController.xib */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -121,6 +134,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		D761DD3D1C21D090008C09CB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D761DD3E1C21D0C6008C09CB /* UIColoer+Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		D7A13EC31C10B2A700D1F963 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +149,8 @@
 				D7A13EE31C10B2A800D1F963 /* Zaikon_iOSTests */,
 				D7A13EEE1C10B2A800D1F963 /* Zaikon_iOSUITests */,
 				D7A13ECD1C10B2A700D1F963 /* Products */,
+				568EA04450348CC9B4832043 /* Pods */,
+				E937A59D37169D154F044A47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +173,7 @@
 				D75CCA9A1C128F4300227B18 /* Model */,
 				D75CCA9B1C128F4800227B18 /* View Controller */,
 				D75CCA9C1C128F6200227B18 /* View */,
+				D761DD3D1C21D090008C09CB /* Extension */,
 				D7AFAEC91C15DBEC001C0063 /* image */,
 				D7A13ED61C10B2A800D1F963 /* Assets.xcassets */,
 				D7A13ED81C10B2A800D1F963 /* LaunchScreen.storyboard */,
@@ -187,6 +211,14 @@
 			name = image;
 			sourceTree = "<group>";
 		};
+		E937A59D37169D154F044A47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BE6468DECABD2921CEAB7B9 /* Pods_Zaikon_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7A13EF41C10B2A800D1F963 /* Build configuration list for PBXNativeTarget "Zaikon_iOS" */;
 			buildPhases = (
+				DEE0B93DD91F92E26292F0C5 /* Check Pods Manifest.lock */,
 				D7A13EC81C10B2A700D1F963 /* Sources */,
 				D7A13EC91C10B2A700D1F963 /* Frameworks */,
 				D7A13ECA1C10B2A700D1F963 /* Resources */,
+				51409CC729740C825D8263E7 /* Embed Pods Frameworks */,
+				EA5A17E68C00C46EBB7AB841 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,7 +332,6 @@
 				D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */,
 				D7AF5EFE1C17EB7300FC20DF /* key_icon.png in Resources */,
 				D7AF5EFD1C17EB7300FC20DF /* mail_icon.png in Resources */,
-				D7026AE91C2090AF00C14DEF /* GoodsViewController.xib in Resources */,
 				D7BF08791C1C2DF3005ABDFB /* akiko.jpg in Resources */,
 				D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */,
 				D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */,
@@ -321,6 +355,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51409CC729740C825D8263E7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zaikon_iOS/Pods-Zaikon_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEE0B93DD91F92E26292F0C5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA5A17E68C00C46EBB7AB841 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zaikon_iOS/Pods-Zaikon_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7A13EC81C10B2A700D1F963 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,6 +413,7 @@
 				D7026AE81C2090AF00C14DEF /* GoodsViewController.swift in Sources */,
 				D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */,
 				D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */,
+				D761DD3F1C21D0C6008C09CB /* UIColoer+Extension.swift in Sources */,
 				D7D426291C15D5BA00EA6F07 /* CustomCell.swift in Sources */,
 				D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */,
 			);
@@ -470,6 +553,7 @@
 		};
 		D7A13EF51C10B2A800D1F963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFEDAB4FBA6853B5EC919281 /* Pods-Zaikon_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Zaikon_iOS/Info.plist;
@@ -481,6 +565,7 @@
 		};
 		D7A13EF61C10B2A800D1F963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB8AF4184292E1D04BEDC74 /* Pods-Zaikon_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Zaikon_iOS/Info.plist;
