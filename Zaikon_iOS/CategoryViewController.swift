@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire // Alamofireをimport
+import Alamofire
 import SwiftyJSON
 
 class CategoryViewController: UIViewController {
@@ -22,6 +22,7 @@ class CategoryViewController: UIViewController {
         self.title = "ザイコン"
         
         //get category
+    
         fetchCategories { () -> Void in
             self.collectViewController()
             let pageMenu = self.makePageMenu()
@@ -42,7 +43,7 @@ class CategoryViewController: UIViewController {
     }
     
     func fetchCategories(callback: () -> Void ) {
-        Alamofire.request(.GET, "http://localhost:3000/api/categories")
+        Alamofire.request(.GET, String.getRootApiUrl() + "/api/categories")
             .responseJSON { response in
                 guard let object = response.result.value else {
                     print("You should check your network connection")
@@ -60,15 +61,17 @@ class CategoryViewController: UIViewController {
     }
     
     func collectViewController() {
+        
         for category in self.categories {
             let controller :GoodsViewController = GoodsViewController()
-            controller.title = category!
+            controller.title = 
             controller.view.frame = self.view.frame
             controllerArray.append(controller)
         }
     }
     
     func makePageMenu() ->  CAPSPageMenu? {
+        
         let navBarHeight = self.navigationController?.navigationBar.frame.size.height
         let statusBarHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
         
