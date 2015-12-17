@@ -12,9 +12,6 @@ class GoodsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("GoodsViewController")
-        print(self.view.frame)
         setGoodsCollectionView()
     }
 
@@ -26,7 +23,7 @@ class GoodsViewController: UIViewController {
         let cellWidth = self.view.frame.size.width / 2 - 2
         
         // collectionView setting
-        let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        let frame = self.view.frame
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSizeMake(cellWidth, cellWidth * 5 / 4)
         layout.minimumInteritemSpacing = 1
