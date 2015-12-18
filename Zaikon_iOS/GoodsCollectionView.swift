@@ -8,10 +8,14 @@
 
 import UIKit
 
+@objc protocol GoodsCollectionViewDelegate {
+    func didselectCollectionViewCell(goods: Goods)
+}
 
 class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
     let cellMargin: CGFloat = 5.0
     var goodsArray: [Goods]?
+    weak var customDelefgate: GoodsCollectionViewDelegate?
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -53,6 +57,11 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
         //        cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
 //        cell.minusButton.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let goods: Goods = goodsArray![indexPath.item]
+        self.customDelefgate?.didselectCollectionViewCell(goods)
     }
     
 
