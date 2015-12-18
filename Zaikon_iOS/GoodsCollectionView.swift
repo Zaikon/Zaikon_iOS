@@ -10,7 +10,7 @@ import UIKit
 
 class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
     let cellMargin: CGFloat = 5.0
-    var goodsNumber = 0
+    var goodsArray: [Goods]?
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -19,7 +19,12 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
         self.dataSource = self
         
         //register class
-        self.registerClass(CustomCell.self, forCellWithReuseIdentifier: "CustomCell")
+        self.registerClass(GoodsCollectionViewCell.self, forCellWithReuseIdentifier: "GoodsCollectionViewCell")
+        
+        setCollectionView()
+        
+        // reloadCollectionView
+        reloadData()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,40 +38,28 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
     
     // collectionView setting
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return (self.goodsArray?.count)!
     }
     
-//    //cell size
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-//        let cellWidth = self.frame.size.width / 2
-//        let cellHeight = cellWidth * 5 / 4
-//        return CGSizeMake(cellWidth, cellHeight)
-//    }
-//    
-//    //vertial gap between cells
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-//        return cellMargin
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-//        return cellMargin
-//    }
-    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomCell", forIndexPath: indexPath) as! CustomCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GoodsCollectionViewCell", forIndexPath: indexPath) as! GoodsCollectionViewCell
         cell.backgroundColor = UIColor.whiteColor()
-        cell.goodsNumberLabel.text = String(goodsNumber)
-        cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
-        cell.minusButton.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
+        let goods = self.goodsArray![indexPath.item]
+        print(goods.name)
+        cell.goodsNumberLabel.text = String(goods.stockNum)
+        cell.unitLabel.text = goods.countingType
+//        cell.stockNum = goods.stockNum
+//        cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
+//        cell.minusButton.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
         makeCustomcellView(cell)
         return cell
     }
     
-    func makeCustomcellView(cell: CustomCell) {
+    func makeCustomcellView(cell: GoodsCollectionViewCell) {
         setgoodsImage(cell)
     }
     
-    func setgoodsImage(cell: CustomCell) {
+    func setgoodsImage(cell: GoodsCollectionViewCell) {
         let cellWidth = cell.frame.width
         cell.goodsImageView.frame.size = CGSizeMake(cellWidth, cellWidth)
         cell.goodsImageView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -75,16 +68,16 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
         cell.addSubview(cell.goodsImageView)
     }
     
-    //Gesture
-    func plusBtnTapped(sender: UIButton) {
-        goodsNumber += 1
-        self.reloadData()
-    }
-    
-    
-    func minusBtnTapped(sender: UIButton) {
-        goodsNumber -= 1
-        self.reloadData()
-    }
+//    //Gesture
+//    func plusBtnTapped(sender: UIButton) {
+//        goodsNumber += 1
+//        self.reloadData()
+//    }
+//    
+//    
+//    func minusBtnTapped(sender: UIButton) {
+//        goodsNumber -= 1
+//        self.reloadData()
+//    }
 
 }

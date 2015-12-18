@@ -9,6 +9,7 @@
 import UIKit
 
 class GoodsViewController: UIViewController {
+    var goodsArray: [Goods]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,9 @@ class GoodsViewController: UIViewController {
         layout.minimumLineSpacing = 1
         
         let goodsCollectionView = GoodsCollectionView(frame: frame, collectionViewLayout: layout)
-        goodsCollectionView.backgroundColor = UIColor.lightGrey()
+        goodsCollectionView.goodsArray = goodsArray
+        print(goodsArray)
+        print(goodsCollectionView.goodsArray)
         self.view.addSubview(goodsCollectionView)
     }
 }

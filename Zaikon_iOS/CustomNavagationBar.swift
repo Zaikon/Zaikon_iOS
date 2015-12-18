@@ -6,4 +6,8 @@
 //  Copyright © 2015年 Tatsuki_Miura. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class CustomNavigationBar: UINavigationBar {
+}
+
