@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
     let cellMargin: CGFloat = 5.0
     var goodsArray: [Goods]?
@@ -45,29 +46,16 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GoodsCollectionViewCell", forIndexPath: indexPath) as! GoodsCollectionViewCell
         cell.backgroundColor = UIColor.whiteColor()
         let goods = self.goodsArray![indexPath.item]
-        print(goods.name)
+        
         cell.goodsNumberLabel.text = String(goods.stockNum)
         cell.unitLabel.text = goods.countingType
-//        cell.stockNum = goods.stockNum
-//        cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
+        cell.goodsImageView.image = cell.diplayImageView(goods.image!)
+        //        cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
 //        cell.minusButton.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
-        makeCustomcellView(cell)
         return cell
     }
     
-    func makeCustomcellView(cell: GoodsCollectionViewCell) {
-        setgoodsImage(cell)
-    }
-    
-    func setgoodsImage(cell: GoodsCollectionViewCell) {
-        let cellWidth = cell.frame.width
-        cell.goodsImageView.frame.size = CGSizeMake(cellWidth, cellWidth)
-        cell.goodsImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        cell.goodsImageView.clipsToBounds = true
-        cell.goodsImageView.image = UIImage(named: "akiko.jpg")
-        cell.addSubview(cell.goodsImageView)
-    }
-    
+
 //    //Gesture
 //    func plusBtnTapped(sender: UIButton) {
 //        goodsNumber += 1

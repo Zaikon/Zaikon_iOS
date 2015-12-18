@@ -32,8 +32,6 @@ class GoodsViewController: UIViewController {
         
         let goodsCollectionView = GoodsCollectionView(frame: frame, collectionViewLayout: layout)
         goodsCollectionView.goodsArray = goodsArray
-        print(goodsArray)
-        print(goodsCollectionView.goodsArray)
         self.view.addSubview(goodsCollectionView)
     }
 }

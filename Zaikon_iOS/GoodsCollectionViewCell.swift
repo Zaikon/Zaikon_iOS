@@ -28,6 +28,7 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         makeBtn(minusButton, title: "−", titleColor: minusBtnColor,  x: 1)
         makeUnitLabel()
         makeGoodNumberLabel()
+        makeImageView()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -80,5 +81,26 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         unitLabel.textColor = UIColor.blackColor()
         unitLabel.font = UIFont(name: "Helvetica-Bold", size: 10)
         self.addSubview(unitLabel)
+    }
+    
+    func makeImageView() {
+        let cellWidth = frame.width
+        goodsImageView.frame.size = CGSizeMake(cellWidth, cellWidth)
+        goodsImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        goodsImageView.clipsToBounds = true
+        self.addSubview(goodsImageView)
+    }
+    
+    func diplayImageView(imageURL:String) -> UIImage {
+        let url = NSURL(string: imageURL)
+        let imageData: NSData
+        
+        do {
+            imageData = try NSData(contentsOfURL: (contentsOfURL: url!))!
+            let image = UIImage(data: imageData)
+            return image!
+        } catch {
+            print("Error: can't create image, check URL")
+        }
     }
 }
