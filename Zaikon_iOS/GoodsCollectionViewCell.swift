@@ -38,7 +38,7 @@ class GoodsCollectionViewCell: UICollectionViewCell {
     
     func makeCellView() {
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.lightGrey().CGColor
+        self.layer.borderColor = UIColor.Grey().CGColor
     }
     
     func makeBtn(button: UIButton, title:String, titleColor: UIColor,x: CGFloat) {

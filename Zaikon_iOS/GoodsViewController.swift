@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoodsViewController: UIViewController {
+class GoodsViewController: UIViewController, GoodsCollectionViewDelegate {
     var goodsArray: [Goods]?
     
     override func viewDidLoad() {
@@ -31,7 +31,12 @@ class GoodsViewController: UIViewController {
         layout.minimumLineSpacing = 1
         
         let goodsCollectionView = GoodsCollectionView(frame: frame, collectionViewLayout: layout)
+        goodsCollectionView.customDelefgate = self
         goodsCollectionView.goodsArray = goodsArray
         self.view.addSubview(goodsCollectionView)
+    }
+    
+    func didselectCollectionViewCell(goods: Goods) {
+        print(goods.name)
     }
 }
