@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CustomCell: UICollectionViewCell {
-    var goodNumber = 0;
+class GoodsCollectionViewCell: UICollectionViewCell {
+    var stockNum:Int?
     let goodsImageView = UIImageView()
     let plusButton = UIButton()
     let minusButton = UIButton()
@@ -28,6 +28,7 @@ class CustomCell: UICollectionViewCell {
         makeBtn(minusButton, title: "−", titleColor: minusBtnColor,  x: 1)
         makeUnitLabel()
         makeGoodNumberLabel()
+        makeImageView()
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -58,7 +59,7 @@ class CustomCell: UICollectionViewCell {
     
     func makeGoodNumberLabel() {
         let length = self.frame.height * 1 / 4
-        let pointX = self.frame.width * 1 / 2
+        let pointX = self.frame.width * 1 / 2 - 3
         let pointY = self.frame.height * 9 / 10
         
         goodsNumberLabel.frame.size = CGSizeMake(length, length)
@@ -71,15 +72,35 @@ class CustomCell: UICollectionViewCell {
     
     func makeUnitLabel() {
         let length = self.frame.width * 1 / 2
-        let pointX = self.frame.width *  1 / 2  -  3
+        let pointX = self.frame.width *  1 / 2  +  20
         let pointY = self.frame.height * 9 / 10 + 5
         
         unitLabel.frame.size = CGSizeMake(length, length)
         unitLabel.center = CGPointMake(pointX, pointY)
-        unitLabel.text = "あと             本"
         unitLabel.textAlignment = NSTextAlignment.Center
         unitLabel.textColor = UIColor.blackColor()
         unitLabel.font = UIFont(name: "Helvetica-Bold", size: 10)
         self.addSubview(unitLabel)
+    }
+    
+    func makeImageView() {
+        let cellWidth = frame.width
+        goodsImageView.frame.size = CGSizeMake(cellWidth, cellWidth)
+        goodsImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        goodsImageView.clipsToBounds = true
+        self.addSubview(goodsImageView)
+    }
+    
+    func diplayImageView(imageURL:String) -> UIImage {
+        let url = NSURL(string: imageURL)
+        let imageData: NSData
+        
+        do {
+            imageData = try NSData(contentsOfURL: (contentsOfURL: url!))!
+            let image = UIImage(data: imageData)
+            return image!
+        } catch {
+            print("Error: can't create image, check URL")
+        }
     }
 }
