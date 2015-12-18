@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CustomPageMenu: CAPSPageMenu {
-    var pageMenu : CustomPageMenu?
-    
-    class func makePageMenu(ViewController: UIViewController) -> CustomPageMenu? {
+extension CAPSPageMenu {
+    class func makeCustomPageMenu(ViewController: UIViewController, controllerArray: Array<UIViewController>) -> CAPSPageMenu {
+        
         let navBarHeight = ViewController.navigationController?.navigationBar.frame.size.height
         let statusBarHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
+        
         
         let arrayNum = controllerArray.count
         let menuWidth = ViewController.view.frame.width / CGFloat(arrayNum)
@@ -31,7 +31,7 @@ class CustomPageMenu: CAPSPageMenu {
             .CenterMenuItems(true),
         ]
         
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, CGFloat(navBarHeight!) + statusBarHeight, ViewController.view.frame.width, ViewController.view.frame.height), pageMenuOptions: parameters)
+        let pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, CGFloat(navBarHeight!) + statusBarHeight, ViewController.view.frame.width, ViewController.view.frame.height), pageMenuOptions: parameters)
         return pageMenu
     }
 }
