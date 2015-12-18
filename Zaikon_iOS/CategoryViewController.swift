@@ -7,33 +7,30 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 class CategoryViewController: UIViewController {
     var pageMenu : CAPSPageMenu?
-    var categories: [String?] = []
     var controllerArray : [UIViewController] = []
+    var categoryStocks = CategoryStocks.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // app title
-        self.title = "ザイコン"
-        
-        //get category
-    
-        fetchCategories { () -> Void in
+            
+        categoryStocks.fetchCategories { () -> Void in
+            
             self.collectViewController()
-            let pageMenu = self.makePageMenu()
-            self.addChildViewController(pageMenu!)
-            self.view.addSubview(pageMenu!.view)
-            pageMenu!.didMoveToParentViewController(self)
+            let pageMenu = CAPSPageMenu.makeCustomPageMenu(self, controllerArray: self.controllerArray)
+            self.addChildViewController(pageMenu)
+            self.view.addSubview(pageMenu.view)
+            pageMenu.didMoveToParentViewController(self)
         }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         super.viewWillAppear(animated)
+        self.navigationItem.title = "ザイコン"
         self.navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
     }
@@ -42,58 +39,15 @@ class CategoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func fetchCategories(callback: () -> Void ) {
-        Alamofire.request(.GET, String.getRootApiUrl() + "/api/categories")
-            .responseJSON { response in
-                guard let object = response.result.value else {
-                    print("You should check your network connection")
-                    return
-                }
-                
-                let categoriesJSON = JSON(object)
-                categoriesJSON["categories"].forEach { (_, json) in
-                    let category = json["name"].string
-                    self.categories.append(category)
-                }
-                callback()
-                
-        }
-    }
-    
     func collectViewController() {
         
-        for category in self.categories {
+        for category in categoryStocks.myCategories {
             let controller :GoodsViewController = GoodsViewController()
-            controller.title = 
+            controller.title =  category.name
+            controller.goodsArray = category.goods
             controller.view.frame = self.view.frame
             controllerArray.append(controller)
         }
     }
-    
-    func makePageMenu() ->  CAPSPageMenu? {
-        
-        let navBarHeight = self.navigationController?.navigationBar.frame.size.height
-        let statusBarHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
-        
-        let arrayNum = controllerArray.count
-        let menuWidth = self.view.frame.width / CGFloat(arrayNum)
-        let parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor.whiteColor()),
-            .SelectedMenuItemLabelColor(UIColor.lightBlue()),
-            .ViewBackgroundColor(UIColor.lightGrey()),
-            .SelectionIndicatorColor(UIColor.lightBlue()),
-            .SelectedMenuItemLabelColor(UIColor.lightBlue()),
-            .UnselectedMenuItemLabelColor(UIColor.blackColor()),
-            .MenuItemFont(UIFont(name: "Avenir-Heavy", size: 13.0)!),
-            .MenuHeight(30.0),
-            .MenuItemWidth(menuWidth),
-            .MenuMargin(0.0),
-            .CenterMenuItems(true),
-        ]
-        
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, CGFloat(navBarHeight!) + statusBarHeight, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
-        return pageMenu
-    }
-    
 }
 
