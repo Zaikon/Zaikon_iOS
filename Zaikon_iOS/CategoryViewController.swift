@@ -33,6 +33,7 @@ class CategoryViewController: UIViewController {
         self.navigationItem.title = "ザイコン"
         self.navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
+        self.navigationController?.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +43,9 @@ class CategoryViewController: UIViewController {
     func collectViewController() {
         
         for category in categoryStocks.myCategories {
-            let controller :GoodsViewController = GoodsViewController()
+            let storyBoard = UIStoryboard(name: "SubGoods", bundle: nil)
+            let controller = storyBoard.instantiateInitialViewController() as! GoodsCollectionViewController
+            print(controller)
             controller.title =  category.name
             controller.goodsArray = category.goods
             controller.view.frame = self.view.frame

@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 class Category: NSObject {
     var id: Int!
