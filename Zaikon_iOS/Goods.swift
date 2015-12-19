@@ -13,7 +13,7 @@ class Goods: NSObject {
     var id: Int?
     var name: String!
     var stockNum: Int!
-    var notification_num: Int!
+    var notificationNum: Int!
     var image: String?
     var amazon_url: String?
     var category_id: Int!
@@ -33,7 +33,7 @@ class Goods: NSObject {
         self.id = attribute["id"].int
         self.name = attribute["name"].string
         self.stockNum = attribute["stock_num"].int
-        self.notification_num = attribute["notification_num"].int
+        self.notificationNum = attribute["notification_num"].int
         self.amazon_url = attribute["amazon_url"].string
         self.image = attribute["image"].string
         self.category_id = attribute["category_id"].int

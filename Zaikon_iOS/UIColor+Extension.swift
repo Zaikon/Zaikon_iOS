@@ -22,4 +22,13 @@ extension UIColor {
     class func lightBlue() -> UIColor {
         return UIColor(red: 75/255, green: 199/255, blue: 241/255, alpha: 1)
     }
+    
+    class func plusBtnColor() -> UIColor {
+        return  UIColor(red: 236/255, green: 0, blue: 20/255, alpha: 1)
+
+    }
+    
+    class func minusBtnColor() -> UIColor {
+        return  UIColor(red: 65/255, green: 187/255, blue: 237/255, alpha: 1)
+    }
 }

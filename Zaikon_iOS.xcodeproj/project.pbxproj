@@ -13,6 +13,9 @@
 		D7112C231C22C72900BFE40D /* String+Extensition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7112C221C22C72900BFE40D /* String+Extensition.swift */; };
 		D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */; };
 		D761DD3F1C21D0C6008C09CB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761DD3E1C21D0C6008C09CB /* UIColor+Extension.swift */; };
+		D79DE7381C23D73000CC1C7E /* GoodsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DE7371C23D73000CC1C7E /* GoodsDetailView.swift */; };
+		D79DE73A1C23D73D00CC1C7E /* GoodsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DE7391C23D73D00CC1C7E /* GoodsDetailView.xib */; };
+		D79DE7441C23D91D00CC1C7E /* GoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DE7431C23D91D00CC1C7E /* GoodsDetailViewController.swift */; };
 		D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */; };
 		D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */; };
 		D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED31C10B2A700D1F963 /* Main.storyboard */; };
@@ -24,6 +27,7 @@
 		D7AF5EFD1C17EB7300FC20DF /* mail_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFB1C17EB7300FC20DF /* mail_icon.png */; };
 		D7AF5EFE1C17EB7300FC20DF /* key_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFC1C17EB7300FC20DF /* key_icon.png */; };
 		D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */; };
+		D7B2EAA61C24BBA300BC723D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B2EAA51C24BBA300BC723D /* UIImageView+Extension.swift */; };
 		D7BF08791C1C2DF3005ABDFB /* akiko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7BF08781C1C2DF3005ABDFB /* akiko.jpg */; };
 		D7D426291C15D5BA00EA6F07 /* GoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D426271C15D5BA00EA6F07 /* GoodsCollectionViewCell.swift */; };
 		D7F32C391C22D84100B64BB4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F32C381C22D84100B64BB4 /* Category.swift */; };
@@ -59,6 +63,9 @@
 		D7112C221C22C72900BFE40D /* String+Extensition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensition.swift"; sourceTree = "<group>"; };
 		D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCollectionView.swift; sourceTree = "<group>"; };
 		D761DD3E1C21D0C6008C09CB /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D79DE7371C23D73000CC1C7E /* GoodsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailView.swift; sourceTree = "<group>"; };
+		D79DE7391C23D73D00CC1C7E /* GoodsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsDetailView.xib; sourceTree = "<group>"; };
+		D79DE7431C23D91D00CC1C7E /* GoodsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailViewController.swift; sourceTree = "<group>"; };
 		D7A13ECC1C10B2A700D1F963 /* Zaikon_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zaikon_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13ECF1C10B2A700D1F963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 		D7AF5EFB1C17EB7300FC20DF /* mail_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_icon.png; sourceTree = "<group>"; };
 		D7AF5EFC1C17EB7300FC20DF /* key_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key_icon.png; sourceTree = "<group>"; };
 		D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zaikon_icon.gif; sourceTree = "<group>"; };
+		D7B2EAA51C24BBA300BC723D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		D7BF08781C1C2DF3005ABDFB /* akiko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akiko.jpg; sourceTree = "<group>"; };
 		D7D426271C15D5BA00EA6F07 /* GoodsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7F32C381C22D84100B64BB4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -133,9 +141,9 @@
 		D75CCA9B1C128F4800227B18 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */,
-				D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */,
-				D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */,
+				D79DE73D1C23D82400CC1C7E /* LogIn */,
+				D79DE73E1C23D83800CC1C7E /* Index */,
+				D79DE73F1C23D84600CC1C7E /* Show */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -143,10 +151,10 @@
 		D75CCA9C1C128F6200227B18 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */,
-				D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */,
-				D7D426271C15D5BA00EA6F07 /* GoodsCollectionViewCell.swift */,
 				D7F32C3A1C22D9CB00B64BB4 /* CustomNavagationBar.swift */,
+				D79DE7401C23D85700CC1C7E /* LonIn */,
+				D79DE7411C23D87200CC1C7E /* Index */,
+				D79DE7421C23D87800CC1C7E /* Show */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -156,9 +164,61 @@
 			children = (
 				D761DD3E1C21D0C6008C09CB /* UIColor+Extension.swift */,
 				D7112C221C22C72900BFE40D /* String+Extensition.swift */,
+				D7B2EAA51C24BBA300BC723D /* UIImageView+Extension.swift */,
 				D707A9971C23486800BF1771 /* CAPSPageMenu+Extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		D79DE73D1C23D82400CC1C7E /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */,
+			);
+			name = LogIn;
+			sourceTree = "<group>";
+		};
+		D79DE73E1C23D83800CC1C7E /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */,
+				D7026AE61C2090AF00C14DEF /* GoodsViewController.swift */,
+			);
+			name = Index;
+			sourceTree = "<group>";
+		};
+		D79DE73F1C23D84600CC1C7E /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE7431C23D91D00CC1C7E /* GoodsDetailViewController.swift */,
+			);
+			name = Show;
+			sourceTree = "<group>";
+		};
+		D79DE7401C23D85700CC1C7E /* LonIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LonIn;
+			sourceTree = "<group>";
+		};
+		D79DE7411C23D87200CC1C7E /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */,
+				D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */,
+				D7D426271C15D5BA00EA6F07 /* GoodsCollectionViewCell.swift */,
+			);
+			name = Index;
+			sourceTree = "<group>";
+		};
+		D79DE7421C23D87800CC1C7E /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE7371C23D73000CC1C7E /* GoodsDetailView.swift */,
+				D79DE7391C23D73D00CC1C7E /* GoodsDetailView.xib */,
+			);
+			name = Show;
 			sourceTree = "<group>";
 		};
 		D7A13EC31C10B2A700D1F963 = {
@@ -353,6 +413,7 @@
 				D7BF08791C1C2DF3005ABDFB /* akiko.jpg in Resources */,
 				D7A13ED71C10B2A800D1F963 /* Assets.xcassets in Resources */,
 				D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */,
+				D79DE73A1C23D73D00CC1C7E /* GoodsDetailView.xib in Resources */,
 				D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,11 +495,14 @@
 				D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */,
 				D7026AE81C2090AF00C14DEF /* GoodsViewController.swift in Sources */,
 				D7A13ED21C10B2A700D1F963 /* CategoryViewController.swift in Sources */,
+				D79DE7441C23D91D00CC1C7E /* GoodsDetailViewController.swift in Sources */,
 				D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */,
 				D7F32C3B1C22D9CB00B64BB4 /* CustomNavagationBar.swift in Sources */,
+				D79DE7381C23D73000CC1C7E /* GoodsDetailView.swift in Sources */,
 				D761DD3F1C21D0C6008C09CB /* UIColor+Extension.swift in Sources */,
 				D7D426291C15D5BA00EA6F07 /* GoodsCollectionViewCell.swift in Sources */,
 				D7F32C411C22E6D500B64BB4 /* CategoryStocks.swift in Sources */,
+				D7B2EAA61C24BBA300BC723D /* UIImageView+Extension.swift in Sources */,
 				D7A13ED01C10B2A700D1F963 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
