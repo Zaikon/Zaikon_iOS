@@ -162,7 +162,7 @@
                 <outlet property="stockNumLabel" destination="WQI-CL-JB6" id="AAZ-Ka-rje"/>
                 <outlet property="titleLabel" destination="TO9-CD-Wm1" id="ke3-Uu-mYb"/>
             </connections>
-            <point key="canvasLocation" x="403.5" y="357.5"/>
+            <point key="canvasLocation" x="406.5" y="204.5"/>
         </view>
     </objects>
     <resources>

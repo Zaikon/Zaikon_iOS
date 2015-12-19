@@ -38,20 +38,6 @@ class GoodsCollectionViewController: UIViewController, GoodsCollectionViewDelega
     }
     
     func didselectCollectionViewCell(goods: Goods) {
-//        let goodsDetailViewController: GoodsDetailViewController = GoodsDetailViewController()
-//        goodsDetailViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-//        goodsDetailViewController.goods = goods
-//        print(goodsDetailViewController.goods)
-//        
-//        
-//        print("+++++++++++++++++++++++++++++++")
-        
-        
-//        self.presentViewController(goodsDetailViewController, animated: true, completion: nil)
-//        print(self.navigationController)
-//        self.presentViewController(goodsDetailViewController, animated: true, completion: nil)
-//        self.presentViewController(goodsDetailViewController, animated: true)
-        
         self.currentSelectedGoods = goods
         performSegueWithIdentifier("ShowDetailViewController", sender: self)
     }
