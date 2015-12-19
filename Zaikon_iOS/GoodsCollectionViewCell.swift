@@ -16,16 +16,14 @@ class GoodsCollectionViewCell: UICollectionViewCell {
     let unitLabel = UILabel()
     let goodsNumberLabel = UILabel()
 
-    let plusBtnColor = UIColor(red: 236/255, green: 0, blue: 20/255, alpha: 1)
-    let minusBtnColor = UIColor(red: 65/255, green: 187/255, blue: 237/255, alpha: 1)
     let btnFont = UIFont(name: "HelveticaNeue", size: 40)
 
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         makeCellView()
-        makeBtn(plusButton, title: "+", titleColor: plusBtnColor, x: 7)
-        makeBtn(minusButton, title: "−", titleColor: minusBtnColor,  x: 1)
+        makeBtn(plusButton, title: "+", titleColor: UIColor.plusBtnColor(), x: 7)
+        makeBtn(minusButton, title: "−", titleColor: UIColor.minusBtnColor(),  x: 1)
         makeUnitLabel()
         makeGoodNumberLabel()
         makeImageView()
@@ -91,16 +89,4 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         self.addSubview(goodsImageView)
     }
     
-    func diplayImageView(imageURL:String) -> UIImage {
-        let url = NSURL(string: imageURL)
-        let imageData: NSData
-        
-        do {
-            imageData = try NSData(contentsOfURL: (contentsOfURL: url!))!
-            let image = UIImage(data: imageData)
-            return image!
-        } catch {
-            print("Error: can't create image, check URL")
-        }
-    }
 }
