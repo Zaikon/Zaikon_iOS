@@ -17,8 +17,9 @@ class LoginView: UIView {
         return UINib(nibName: "LoginView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! LoginView
     }
     
-    func addBorderEffect(button: UIButton) {
-        button.layer.cornerRadius = 5
+    func setViewEffect() {
+        UIView.setGradationView(self)
+        loginButton.layer.cornerRadius = 5
+        signUpButton.layer.cornerRadius = 5
     }
-    
 }

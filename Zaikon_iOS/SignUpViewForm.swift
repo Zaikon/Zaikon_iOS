@@ -9,10 +9,24 @@
 import UIKit
 
 class SignUpViewForm: UIView {
+    @IBOutlet weak var nameLabel: UITextField!
+    @IBOutlet weak var emailLabel: UITextField!
+    
+    
+    @IBOutlet weak var passwordLabel: UITextField!
+    @IBOutlet weak var passwordConfirmationLabel: UITextField!
+    
+    @IBOutlet weak var signUpStartButton: UIButton!
+    
     
     class func instance() -> SignUpViewForm {
         
         return UINib(nibName: "SignUpViewForm", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! SignUpViewForm
     }
-
+    
+    func setViewEffect() {
+        UIView.setGradationView(self)
+        signUpStartButton.layer.cornerRadius = 5
+    }
+    
 }

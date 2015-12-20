@@ -9,10 +9,8 @@
 import UIKit
 
 class LoginViewForm: UIView {
-    
     class func instance() -> LoginViewForm {
         
         return UINib(nibName: "LoginViewForm", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! LoginViewForm
     }
-
 }
