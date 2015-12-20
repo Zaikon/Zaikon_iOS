@@ -9,12 +9,14 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    var loginView: LoginView!
+    var loginFormView: LoginViewForm!
+    var signFormView: SignUpViewForm!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let loginView = LoginView.instance()
+        loginView = LoginView.instance()
         loginView.frame = self.view.frame
         loginView.setViewEffect()
         
@@ -29,14 +31,15 @@ class LoginViewController: UIViewController {
     }
     
     func tapLoginButton(sender: UIButton) {
-        let loginFormView = LoginViewForm.instance()
-        loginFormView.frame = self.view.frame
+        loginFormView = LoginViewForm.instance()
+        loginFormView.frame.origin = CGPointMake(0, self.view.frame.height)
+        loginFormView.setViewEffect()
         self.view.addSubview(loginFormView)
     }
     
     func tapSignUpButton(sender: UIButton) {
-        let signFormView = SignUpViewForm.instance()
-        signFormView.frame = self.view.frame
+        signFormView = SignUpViewForm.instance()
+        signFormView.frame.origin = CGPointMake(0, self.view.frame.height)
         signFormView.setViewEffect()
         self.view.addSubview(signFormView)
     }
