@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="72M-nw-MIQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Goods Collection View Controller-->
+        <scene sceneID="KBZ-wb-0wW">
+            <objects>
+                <viewController storyboardIdentifier="GoodsCollectionViewController" id="72M-nw-MIQ" customClass="GoodsCollectionViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wIk-aK-w8a"/>
+                        <viewControllerLayoutGuide type="bottom" id="rHF-NM-Jb9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sY4-Sy-KIG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="C9L-Wr-3tb" kind="show" identifier="ShowDetailViewController" id="WKn-BT-uQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34T-04-Tpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175.5" y="97.5"/>
+        </scene>
+        <!--Goods Detail View Controller-->
+        <scene sceneID="R2n-Lc-hmE">
+            <objects>
+                <viewController id="C9L-Wr-3tb" customClass="GoodsDetailViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yef-Zi-z17"/>
+                        <viewControllerLayoutGuide type="bottom" id="W7c-1G-EsZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9QB-Uz-V22">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4N-0h-65S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.5" y="97.5"/>
+        </scene>
+    </scenes>
+</document>

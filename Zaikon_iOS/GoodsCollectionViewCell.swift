@@ -16,7 +16,7 @@ class GoodsCollectionViewCell: UICollectionViewCell {
     let unitLabel = UILabel()
     let goodsNumberLabel = UILabel()
 
-    let btnFont = UIFont(name: "HelveticaNeue", size: 40)
+    let btnFont = UIFont(name: "HelveticaNeue", size: 20)
 
     
     override init(frame: CGRect) {

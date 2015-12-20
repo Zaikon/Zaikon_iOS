@@ -8,32 +8,21 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var dockViewHeightConstrain: NSLayoutConstraint!
-    @IBOutlet weak var iconBackGroundView: UIView!
-    
+class LoginViewController: UIViewController {
+    var loginView: LoginView!
+    var loginFormView: LoginViewForm!
+    var signFormView: SignUpViewForm!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        passwordTextField.secureTextEntry = true
-        makeLoginButton()
-        makeIconBackGroundView()
+        loginView = LoginView.instance()
+        loginView.frame = self.view.frame
+        loginView.setViewEffect()
         
-        //画像タップ時に検出するジェスチャーの設定
-        let tapGesture = UITapGestureRecognizer(target: self, action: "loginPageTapped")
-        self.view.addGestureRecognizer(tapGesture)
-        
-        //Notificationの定義、キーボードの表示/非表示の通知の登録
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: "showKeyboard:", name: UIKeyboardWillShowNotification, object: nil)
-        notificationCenter.addObserver(self, selector: "hideKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
-        
+        loginView.loginButton.addTarget(self, action: "tapLoginButton:", forControlEvents: .TouchUpInside)
+        loginView.signUpButton.addTarget(self, action: "tapSignUpButton:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(loginView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,40 +30,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func makeLoginButton() {
-        loginButton.layer.cornerRadius = 3
+    func tapLoginButton(sender: UIButton) {
+        loginFormView = LoginViewForm.instance()
+        loginFormView.frame.origin = CGPointMake(0, self.view.frame.height)
+        loginFormView.setViewEffect()
+        self.view.addSubview(loginFormView)
     }
     
-    func makeIconBackGroundView() {
-        iconBackGroundView.layer.cornerRadius = iconBackGroundView.frame.width / 2
-        iconBackGroundView.layer.borderWidth = 2
-        iconBackGroundView.layer.borderColor = UIColor(red: 75/255, green: 199/255, blue: 241/255, alpha: 1).CGColor
-    }
-
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        return true
+    func tapSignUpButton(sender: UIButton) {
+        signFormView = SignUpViewForm.instance()
+        signFormView.frame.origin = CGPointMake(0, self.view.frame.height)
+        signFormView.setViewEffect()
+        self.view.addSubview(signFormView)
     }
     
-    //キーボードが表示される直前
-    func showKeyboard(notification: NSNotification) {
-        let keyboardRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue
-        UIView.animateWithDuration(0.25, animations: {
-            self.dockViewHeightConstrain.constant = (keyboardRect?.size.height)! + 150
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-    }
-    
-    func hideKeyboard(notification: NSNotification) {
-        UIView.animateWithDuration(0.25, animations: {
-            self.dockViewHeightConstrain.constant = 290
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-    }
-    
-    func loginPageTapped() {
-        self.emailTextField.endEditing(true)
-        self.passwordTextField.endEditing(true)
-    }
  }

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewForm" customModule="Zaikon_iOS" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginViewForm" customModule="Zaikon_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eny-Zs-2H2">
+                    <rect key="frame" x="10" y="266" width="355" height="391"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-do-9k4" userLabel="SignForm">
+                            <rect key="frame" x="30" y="30" width="295" height="242"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MailIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-Yy-yQv">
+                                    <rect key="frame" x="15" y="15" width="30" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="RrD-sB-Jz5"/>
+                                        <constraint firstAttribute="height" constant="30" id="x3Q-PL-55X"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="jkB-sn-RZG">
+                                    <rect key="frame" x="15" y="75" width="30" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="71P-7E-Zp1"/>
+                                        <constraint firstAttribute="height" constant="30" id="jgp-a7-s0J"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gur-hz-Jei">
+                                    <rect key="frame" x="55" y="15" width="225" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Qog-fY-Cyz"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Passsword" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zbf-kv-1gH">
+                                    <rect key="frame" x="55" y="75" width="225" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="icX-ns-ZKd"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                </textField>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstItem="Gur-hz-Jei" firstAttribute="top" secondItem="Skp-do-9k4" secondAttribute="top" constant="15" id="7Ez-OL-sKG"/>
+                                <constraint firstItem="jkB-sn-RZG" firstAttribute="leading" secondItem="Skp-do-9k4" secondAttribute="leading" constant="15" id="IWe-Ot-b7g"/>
+                                <constraint firstItem="zbf-kv-1gH" firstAttribute="top" secondItem="Gur-hz-Jei" secondAttribute="bottom" constant="30" id="b2L-w7-Bg6"/>
+                                <constraint firstItem="jkB-sn-RZG" firstAttribute="top" secondItem="YS0-Yy-yQv" secondAttribute="bottom" constant="30" id="b5O-WZ-Hwp"/>
+                                <constraint firstAttribute="trailing" secondItem="zbf-kv-1gH" secondAttribute="trailing" constant="15" id="djN-EI-iSY"/>
+                                <constraint firstItem="Gur-hz-Jei" firstAttribute="leading" secondItem="YS0-Yy-yQv" secondAttribute="trailing" constant="10" id="fyl-2t-t73"/>
+                                <constraint firstItem="YS0-Yy-yQv" firstAttribute="top" secondItem="Skp-do-9k4" secondAttribute="top" constant="15" id="guD-Ec-ZYe"/>
+                                <constraint firstItem="YS0-Yy-yQv" firstAttribute="leading" secondItem="Skp-do-9k4" secondAttribute="leading" constant="15" id="hRy-2l-Hoy"/>
+                                <constraint firstItem="zbf-kv-1gH" firstAttribute="leading" secondItem="jkB-sn-RZG" secondAttribute="trailing" constant="10" id="r8B-5g-Fco"/>
+                                <constraint firstAttribute="trailing" secondItem="Gur-hz-Jei" secondAttribute="trailing" constant="15" id="wYF-Rf-kxo"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAP-WW-P9R">
+                            <rect key="frame" x="45" y="302" width="265" height="45"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.29411764709999999" green="0.78039215689999997" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="wdM-Ge-QkW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                            <state key="normal" title="Log In">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydc-ct-EUE">
+                            <rect key="frame" x="320" y="10" width="25" height="25"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="68F-UA-UFZ"/>
+                                <constraint firstAttribute="height" constant="25" id="TOE-k4-hCX"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="allow.png"/>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="lAP-WW-P9R" firstAttribute="leading" secondItem="eny-Zs-2H2" secondAttribute="leading" constant="45" id="2dB-QA-xza"/>
+                        <constraint firstAttribute="trailing" secondItem="lAP-WW-P9R" secondAttribute="trailing" constant="45" id="3DK-Co-b1g"/>
+                        <constraint firstAttribute="width" secondItem="eny-Zs-2H2" secondAttribute="height" multiplier="1:1.1" id="5Yf-Jp-6rn"/>
+                        <constraint firstItem="Skp-do-9k4" firstAttribute="leading" secondItem="eny-Zs-2H2" secondAttribute="leading" constant="30" id="6bx-Dc-VxF"/>
+                        <constraint firstAttribute="trailing" secondItem="Ydc-ct-EUE" secondAttribute="trailing" constant="10" id="DJM-mr-Oxr"/>
+                        <constraint firstItem="Skp-do-9k4" firstAttribute="top" secondItem="eny-Zs-2H2" secondAttribute="top" constant="30" id="Ohe-O5-0Ae"/>
+                        <constraint firstItem="lAP-WW-P9R" firstAttribute="top" secondItem="Skp-do-9k4" secondAttribute="bottom" constant="30" id="YPc-oE-pVh"/>
+                        <constraint firstAttribute="bottom" secondItem="Skp-do-9k4" secondAttribute="bottom" constant="119" id="aZK-te-fdZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Skp-do-9k4" secondAttribute="trailing" constant="30" id="cLg-hx-VO0"/>
+                        <constraint firstItem="Ydc-ct-EUE" firstAttribute="top" secondItem="eny-Zs-2H2" secondAttribute="top" constant="10" id="gyC-Pu-UC3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eny-Zs-2H2" secondAttribute="trailing" constant="10" id="RVX-gR-63d"/>
+                <constraint firstAttribute="bottom" secondItem="eny-Zs-2H2" secondAttribute="bottom" constant="10" id="UzP-io-DlC"/>
+                <constraint firstItem="eny-Zs-2H2" firstAttribute="width" secondItem="eny-Zs-2H2" secondAttribute="height" multiplier="1:1.1" id="aJW-ly-DJi"/>
+                <constraint firstItem="eny-Zs-2H2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="lf2-6d-aDN"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="LoginStartButton" destination="lAP-WW-P9R" id="Cz7-2d-S5A"/>
+                <outlet property="dockViewHeightConstrain" destination="UzP-io-DlC" id="gVf-2H-jeM"/>
+                <outlet property="emailTextField" destination="Gur-hz-Jei" id="Pto-FP-KSi"/>
+                <outlet property="loginForm" destination="eny-Zs-2H2" id="m9Y-77-FD7"/>
+                <outlet property="passwordTextField" destination="zbf-kv-1gH" id="myo-gc-TEy"/>
+                <outlet property="removeViewButton" destination="Ydc-ct-EUE" id="hgd-e8-IlD"/>
+            </connections>
+            <point key="canvasLocation" x="380.5" y="401.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="KeyIcon.png" width="256" height="256"/>
+        <image name="MailIcon.png" width="256" height="256"/>
+        <image name="allow.png" width="256" height="256"/>
+    </resources>
+</document>

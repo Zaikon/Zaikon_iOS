@@ -35,7 +35,6 @@ class GoodsDetailView: UIView {
         bringPartsEffect(plusBtn, color: UIColor.lightGrey(), cornerRadius: 0)
         bringPartsEffect(editBtn, color: UIColor.minusBtnColor(), cornerRadius: 3)
         bringPartsEffect(deleteBtn, color: UIColor.plusBtnColor(), cornerRadius: 3)
-        
     }
     
     func bringPartsEffect(parts: AnyObject, color: UIColor, cornerRadius: CGFloat) {
@@ -47,17 +46,17 @@ class GoodsDetailView: UIView {
     func addScollViewEffect() {
         print(self.frame.size)
         print(self.goodsImageView.frame.size)
-        print(self.scrollView.frame.size)
-        scrollView.contentSize = CGSizeMake(self.scrollView.frame.width, self.scrollView.frame.height)
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.showsHorizontalScrollIndicator = false
+//        print(self.scrollView.frame.size)
+//        scrollView.contentSize = CGSizeMake(self.scrollView.frame.width, self.scrollView.frame.height)
+//        scrollView.showsVerticalScrollIndicator = false
+//        scrollView.showsHorizontalScrollIndicator = false
     }
     
     func insertGoodsInftormation(goods: Goods) {
         goodsImageView.image = UIImageView.diplayImageView(goods.image!)
         titleLabel.text = goods.name
-        stockNumLabel.text = "\(goods.name) \(goods.countingType)"
-        stockNumLabel.text = "通知在庫数: \(goods.notificationNum)"
+        stockNumLabel.text = "\(goods.stockNum) \(goods.countingType)"
+        notificationNumLabel.text = "通知在庫数: \(goods.notificationNum)"
     }
     
 }

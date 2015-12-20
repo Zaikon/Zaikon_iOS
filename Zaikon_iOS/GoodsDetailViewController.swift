@@ -14,7 +14,6 @@ class GoodsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         goodsDetailView = GoodsDetailView.instance()
         goodsDetailView.frame = self.view.frame
         goodsDetailView.addBorderEffect()
@@ -31,7 +30,8 @@ class GoodsDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.navigationItem.title = "ザイコン"
+        self.navigationItem.title  = goods.name
         self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoodsViewController: UIViewController, GoodsCollectionViewDelegate {
+class GoodsCollectionViewController: UIViewController, GoodsCollectionViewDelegate {
     var goodsArray: [Goods]?
     var currentSelectedGoods: Goods?
     
@@ -38,14 +38,12 @@ class GoodsViewController: UIViewController, GoodsCollectionViewDelegate {
     }
     
     func didselectCollectionViewCell(goods: Goods) {
-        let goodsDetailViewController: GoodsDetailViewController = GoodsDetailViewController()
-        goodsDetailViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-        goodsDetailViewController.goods = goods
-        self.presentViewController(goodsDetailViewController, animated: true, completion: nil)
+        self.currentSelectedGoods = goods
+        performSegueWithIdentifier("ShowDetailViewController", sender: self)
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let goodsDetailViewController = segue.destinationViewController as! GoodsDetailViewController
-//        goodsDetailViewController.goods = self.currentSelectedGoods
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let goodsDetailViewController = segue.destinationViewController as! GoodsDetailViewController
+        goodsDetailViewController.goods = currentSelectedGoods
+    }
 }
