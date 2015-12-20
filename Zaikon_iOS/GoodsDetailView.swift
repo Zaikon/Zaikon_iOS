@@ -44,8 +44,6 @@ class GoodsDetailView: UIView {
     }
     
     func addScollViewEffect() {
-        print(self.frame.size)
-        print(self.goodsImageView.frame.size)
 //        print(self.scrollView.frame.size)
 //        scrollView.contentSize = CGSizeMake(self.scrollView.frame.width, self.scrollView.frame.height)
 //        scrollView.showsVerticalScrollIndicator = false

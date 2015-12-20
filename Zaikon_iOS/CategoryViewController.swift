@@ -45,7 +45,6 @@ class CategoryViewController: UIViewController {
         for category in categoryStocks.myCategories {
             let storyBoard = UIStoryboard(name: "SubGoods", bundle: nil)
             let controller = storyBoard.instantiateInitialViewController() as! GoodsCollectionViewController
-            print(controller)
             controller.title =  category.name
             controller.goodsArray = category.goods
             controller.view.frame = self.view.frame

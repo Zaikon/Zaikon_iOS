@@ -47,7 +47,6 @@ class LoginViewForm: UIView, UITextFieldDelegate {
         
         let keyboardRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue
         UIView.animateWithDuration(0.25, animations: {
-            print(keyboardRect?.size.height)
             self.dockViewHeightConstrain.constant = (keyboardRect?.size.height)!
             self.layoutIfNeeded()
             }, completion: nil)
