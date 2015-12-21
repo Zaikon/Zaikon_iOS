@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import Alamofire
 import SwiftyJSON
 
 class Goods: NSObject {
-    var id: Int?
+    var id: Int!
     var name: String!
     var stockNum: Int!
     var notificationNum: Int!
@@ -19,6 +20,7 @@ class Goods: NSObject {
     var category_id: Int!
     var countingType: String!
     
+    var categoryStocks = CategoryStocks.sharedInstance
     
     class func createArrayFromJson(arrayJson: JSON) -> Array<Goods> {
         var goodsArray: [Goods] = []
@@ -38,5 +40,44 @@ class Goods: NSObject {
         self.image = attribute["image"].string
         self.category_id = attribute["category_id"].int
         self.countingType = attribute["counting_type"].string
+    }
+    
+    func countUp(callback: () -> Void ) {
+        Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id)/count_up")
+            .responseJSON { response in
+                guard let object = response.result.value else {
+                    print("check host server statred")
+                    return
+                }
+                let categoriesJSON = JSON(object)
+                categoriesJSON["categories"].forEach { (_, json) in
+                    let category = Category()
+                    category.id = json["id"].int
+                    category.name = json["name"].string
+                    category.goods = Goods.createArrayFromJson(json["goods"])
+                    self.categoryStocks.myCategories.append(category)
+                }
+                callback()
+        }
+    }
+    
+    func countDown(callback: () -> Void ) {
+        Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id!)/count_down")
+            .responseJSON { response in
+                guard let object = response.result.value else {
+                    print("check host server statred")
+                    return
+                }
+                let categoriesJSON = JSON(object)
+                categoriesJSON["categories"].forEach { (_, json) in
+                    let category = Category()
+                    category.id = json["id"].int
+                    category.name = json["name"].string
+                    category.goods = Goods.createArrayFromJson(json["goods"])
+                    self.categoryStocks.myCategories.append(category)
+                }
+                callback()
+        }
+        
     }
 }
