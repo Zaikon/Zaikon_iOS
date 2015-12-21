@@ -9,7 +9,6 @@
 import UIKit
 
 class GoodsDetailView: UIView {
-    
     @IBOutlet weak var goodsImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,13 +17,17 @@ class GoodsDetailView: UIView {
     
     @IBOutlet weak var plusBtn: UIButton!
     @IBOutlet weak var minusBtn: UIButton!
-    @IBOutlet weak var deleteBtn: UIButton!
-    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var settingButton: UIButton!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    var goods: Goods!
     
     class func instance() -> GoodsDetailView {
         return UINib(nibName: "GoodsDetailView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! GoodsDetailView
+    }
+    
+    override func awakeFromNib() {
+        plusBtn.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
+        minusBtn.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
     }
     
     func addBorderEffect() {
@@ -33,8 +36,6 @@ class GoodsDetailView: UIView {
         bringPartsEffect(notificationNumLabel, color: UIColor.lightGrey(), cornerRadius: 0)
         bringPartsEffect(minusBtn, color: UIColor.lightGrey(), cornerRadius: 0)
         bringPartsEffect(plusBtn, color: UIColor.lightGrey(), cornerRadius: 0)
-        bringPartsEffect(editBtn, color: UIColor.minusBtnColor(), cornerRadius: 3)
-        bringPartsEffect(deleteBtn, color: UIColor.plusBtnColor(), cornerRadius: 3)
     }
     
     func bringPartsEffect(parts: AnyObject, color: UIColor, cornerRadius: CGFloat) {
@@ -43,12 +44,6 @@ class GoodsDetailView: UIView {
         parts.layer.cornerRadius = cornerRadius
     }
     
-    func addScollViewEffect() {
-//        print(self.scrollView.frame.size)
-//        scrollView.contentSize = CGSizeMake(self.scrollView.frame.width, self.scrollView.frame.height)
-//        scrollView.showsVerticalScrollIndicator = false
-//        scrollView.showsHorizontalScrollIndicator = false
-    }
     
     func insertGoodsInftormation(goods: Goods) {
         goodsImageView.image = UIImageView.diplayImageView(goods.image!)
