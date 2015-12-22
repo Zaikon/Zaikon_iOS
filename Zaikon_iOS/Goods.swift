@@ -42,41 +42,27 @@ class Goods: NSObject {
         self.countingType = attribute["counting_type"].string
     }
     
-    func countUp(callback: () -> Void ) {
+    func countUp(callback: (goods: Goods) -> Void ) {
         Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id)/count_up")
             .responseJSON { response in
                 guard let object = response.result.value else {
                     print("check host server statred")
                     return
                 }
-                let categoriesJSON = JSON(object)
-                categoriesJSON["categories"].forEach { (_, json) in
-                    let category = Category()
-                    category.id = json["id"].int
-                    category.name = json["name"].string
-                    category.goods = Goods.createArrayFromJson(json["goods"])
-                    self.categoryStocks.myCategories.append(category)
-                }
-                callback()
+                let goods = Goods(attribute: JSON(object))
+                callback(goods: goods)
         }
     }
     
-    func countDown(callback: () -> Void ) {
-        Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id!)/count_down")
+    func countDown(callback: (goods: Goods) -> Void ) {
+        Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id)/count_down")
             .responseJSON { response in
                 guard let object = response.result.value else {
                     print("check host server statred")
                     return
                 }
-                let categoriesJSON = JSON(object)
-                categoriesJSON["categories"].forEach { (_, json) in
-                    let category = Category()
-                    category.id = json["id"].int
-                    category.name = json["name"].string
-                    category.goods = Goods.createArrayFromJson(json["goods"])
-                    self.categoryStocks.myCategories.append(category)
-                }
-                callback()
+                let goods = Goods(attribute: JSON(object))
+                callback(goods: goods) 
         }
         
     }

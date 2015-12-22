@@ -14,6 +14,7 @@ class GoodsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(goods)
         goodsDetailView = GoodsDetailView.instance()
         goodsDetailView.frame = self.view.frame
         goodsDetailView.goods = goods
@@ -39,7 +40,7 @@ class GoodsDetailViewController: UIViewController {
     func settingBtnTapped(sender: UIButton) {
         let alertController = UIAlertController(title: "Setting Option", message: nil, preferredStyle: .ActionSheet)
         let editAction = UIAlertAction(title: "Edit", style: .Default) { (action: UIAlertAction!) -> Void in
-            print("押された")
+            print("edit")
         }
         let deleteAction = UIAlertAction(title: "Delete", style: .Destructive) { (action: UIAlertAction!) -> Void in
             print("delete")

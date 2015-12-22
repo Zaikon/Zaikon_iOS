@@ -27,7 +27,7 @@ class CategoryStocks: NSObject {
                     category.id = json["id"].int
                     category.name = json["name"].string
                     category.goods = Goods.createArrayFromJson(json["goods"])
-                    self.myCategories.append(category)
+                    CategoryStocks.sharedInstance.myCategories.append(category)
                 }
                 callback()
         }

@@ -71,16 +71,18 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
     //Gesture
     func plusBtnTapped(sender: UIButton) {
         let goods = goodsArray![tag]
-        goods.countUp { () -> Void in
-            self.reloadData()
+        goods.countUp { (goods) -> Void in
+            let cell = sender.superview as! GoodsCollectionViewCell
+            cell.goodsNumberLabel.text = String(goods.stockNum)
         }
     }
     
     
     func minusBtnTapped(sender: UIButton) {
         let goods = goodsArray![tag]
-        goods.countUp { () -> Void in
-            self.reloadData()
+        goods.countDown { (goods) -> Void in
+            let cell = sender.superview as! GoodsCollectionViewCell
+            cell.goodsNumberLabel.text = String(goods.stockNum)
         }
     }
 

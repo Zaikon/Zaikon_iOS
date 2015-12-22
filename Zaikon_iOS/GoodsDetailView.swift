@@ -52,4 +52,16 @@ class GoodsDetailView: UIView {
         notificationNumLabel.text = "通知在庫数: \(goods.notificationNum)"
     }
     
+    func plusBtnTapped(sender: UIButton) {
+        goods.countUp { (goods) -> Void in
+            self.stockNumLabel.text = "\(goods.stockNum) \(goods.countingType)"
+        }
+    }
+    
+    func minusBtnTapped(sender: UIButton) {
+        goods.countDown { (goods) -> Void in
+            self.stockNumLabel.text = "\(goods.stockNum) \(goods.countingType)"
+        }
+    }
+    
 }
