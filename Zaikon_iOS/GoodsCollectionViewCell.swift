@@ -14,7 +14,7 @@ class GoodsCollectionViewCell: UICollectionViewCell {
     let plusButton = UIButton()
     let minusButton = UIButton()
     let unitLabel = UILabel()
-    let goodsNumberLabel = UILabel()
+    var goodsNumberLabel = UILabel()
 
     let btnFont = UIFont(name: "HelveticaNeue", size: 20)
 
