@@ -17,7 +17,6 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
             
         categoryStocks.fetchCategories { () -> Void in
-            
             self.collectViewController()
             let pageMenu = CAPSPageMenu.makeCustomPageMenu(self, controllerArray: self.controllerArray)
             self.addChildViewController(pageMenu)

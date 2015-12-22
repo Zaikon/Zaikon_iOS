@@ -18,7 +18,7 @@ class CategoryStocks: NSObject {
         Alamofire.request(.GET, String.getRootApiUrl() + "/api/categories")
             .responseJSON { response in
                 guard let object = response.result.value else {
-                    print("You should check your network connection")
+                    print("check host server statred")
                     return
                 }
                 let categoriesJSON = JSON(object)
@@ -27,7 +27,7 @@ class CategoryStocks: NSObject {
                     category.id = json["id"].int
                     category.name = json["name"].string
                     category.goods = Goods.createArrayFromJson(json["goods"])
-                    self.myCategories.append(category)
+                    CategoryStocks.sharedInstance.myCategories.append(category)
                 }
                 callback()
         }

@@ -14,10 +14,12 @@ class GoodsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(goods)
         goodsDetailView = GoodsDetailView.instance()
         goodsDetailView.frame = self.view.frame
+        goodsDetailView.goods = goods
+        goodsDetailView.settingButton.addTarget(self, action: "settingBtnTapped:", forControlEvents: .TouchUpInside)
         goodsDetailView.addBorderEffect()
-        goodsDetailView.addScollViewEffect()
         goodsDetailView.insertGoodsInftormation(goods)
         self.view.addSubview(goodsDetailView)
     }
@@ -33,5 +35,22 @@ class GoodsDetailViewController: UIViewController {
         self.navigationItem.title  = goods.name
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
+    }
+    
+    func settingBtnTapped(sender: UIButton) {
+        let alertController = UIAlertController(title: "Setting Option", message: nil, preferredStyle: .ActionSheet)
+        let editAction = UIAlertAction(title: "Edit", style: .Default) { (action: UIAlertAction!) -> Void in
+            print("edit")
+        }
+        let deleteAction = UIAlertAction(title: "Delete", style: .Destructive) { (action: UIAlertAction!) -> Void in
+            print("delete")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(editAction)
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
 }

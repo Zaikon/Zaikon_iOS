@@ -13,6 +13,7 @@ import UIKit
 }
 
 class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
+    
     let cellMargin: CGFloat = 5.0
     var goodsArray: [Goods]?
     weak var customDelefgate: GoodsCollectionViewDelegate?
@@ -54,8 +55,10 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
         cell.goodsNumberLabel.text = String(goods.stockNum)
         cell.unitLabel.text = goods.countingType
         cell.goodsImageView.image = UIImageView.diplayImageView(goods.image!)
-        //        cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
-//        cell.minusButton.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
+        cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
+        cell.minusButton.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
+        cell.plusButton.tag = indexPath.item
+        cell.minusButton.tag = indexPath.item
         return cell
     }
     
@@ -65,16 +68,22 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
     }
     
 
-//    //Gesture
-//    func plusBtnTapped(sender: UIButton) {
-//        goodsNumber += 1
-//        self.reloadData()
-//    }
-//    
-//    
-//    func minusBtnTapped(sender: UIButton) {
-//        goodsNumber -= 1
-//        self.reloadData()
-//    }
+    //Gesture
+    func plusBtnTapped(sender: UIButton) {
+        let goods = goodsArray![tag]
+        goods.countUp { (goods) -> Void in
+            let cell = sender.superview as! GoodsCollectionViewCell
+            cell.goodsNumberLabel.text = String(goods.stockNum)
+        }
+    }
+    
+    
+    func minusBtnTapped(sender: UIButton) {
+        let goods = goodsArray![tag]
+        goods.countDown { (goods) -> Void in
+            let cell = sender.superview as! GoodsCollectionViewCell
+            cell.goodsNumberLabel.text = String(goods.stockNum)
+        }
+    }
 
 }
