@@ -27,6 +27,7 @@
 		D779105E1C25CD8C001F288B /* LoginViewForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = D779105D1C25CD8C001F288B /* LoginViewForm.xib */; };
 		D77910601C25CD9F001F288B /* SignUpViewForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = D779105F1C25CD9F001F288B /* SignUpViewForm.xib */; };
 		D77945C91C28B01600D33B83 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D77945C81C28B01600D33B83 /* settings.png */; };
+		D79BF9B51C2A82C600004BA1 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79BF9B41C2A82C600004BA1 /* CurrentUser.swift */; };
 		D79DE7381C23D73000CC1C7E /* GoodsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DE7371C23D73000CC1C7E /* GoodsDetailView.swift */; };
 		D79DE73A1C23D73D00CC1C7E /* GoodsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DE7391C23D73D00CC1C7E /* GoodsDetailView.xib */; };
 		D79DE7441C23D91D00CC1C7E /* GoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DE7431C23D91D00CC1C7E /* GoodsDetailViewController.swift */; };
@@ -89,6 +90,7 @@
 		D779105D1C25CD8C001F288B /* LoginViewForm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewForm.xib; sourceTree = "<group>"; };
 		D779105F1C25CD9F001F288B /* SignUpViewForm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewForm.xib; sourceTree = "<group>"; };
 		D77945C81C28B01600D33B83 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		D79BF9B41C2A82C600004BA1 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		D79DE7371C23D73000CC1C7E /* GoodsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailView.swift; sourceTree = "<group>"; };
 		D79DE7391C23D73D00CC1C7E /* GoodsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsDetailView.xib; sourceTree = "<group>"; };
 		D79DE7431C23D91D00CC1C7E /* GoodsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsDetailViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				D7F32C3C1C22DB4A00B64BB4 /* Goods.swift */,
 				D7F32C401C22E6D500B64BB4 /* CategoryStocks.swift */,
 				D77910061C251B04001F288B /* User.swift */,
+				D79BF9B41C2A82C600004BA1 /* CurrentUser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 			files = (
 				D7AF5EFA1C17E99400FC20DF /* LoginViewController.swift in Sources */,
 				D7F32C391C22D84100B64BB4 /* Category.swift in Sources */,
+				D79BF9B51C2A82C600004BA1 /* CurrentUser.swift in Sources */,
 				D7F32C3D1C22DB4A00B64BB4 /* Goods.swift in Sources */,
 				D707A9981C23486800BF1771 /* CAPSPageMenu+Extension.swift in Sources */,
 				D7112C231C22C72900BFE40D /* String+Extensition.swift in Sources */,
