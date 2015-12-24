@@ -12,4 +12,16 @@ extension String {
     static func getRootApiUrl() -> String {
         return "http://localhost:3000"
     }
+    
+    static func getTokenUrl() -> String{
+        return "http://localhost:3000/oauth/token"
+    }
+    
+    static func getSignUpUrl() -> String {
+        return "http://localhost:3000/api/users"
+    }
+    
+    static func getUserFromToken() -> String {
+        return "http://localhost:3000/api/me"
+    }
 }
