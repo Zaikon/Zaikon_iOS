@@ -33,9 +33,13 @@ class GoodsDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.navigationItem.title  = goods.name
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
+        
+        let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        navigationItem.title  = goods.name
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationItem.backBarButtonItem = backButtonItem
+        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
     }
     
     func settingBtnTapped(sender: UIButton) {

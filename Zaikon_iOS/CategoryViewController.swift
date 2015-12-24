@@ -29,10 +29,13 @@ class CategoryViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.navigationItem.title = "ザイコン"
-        self.navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
-        self.navigationController?.navigationBar.translucent = true
+        let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+
+        navigationItem.title = "ザイコン"
+        navigationItem.backBarButtonItem = backButtonItem
+        navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
+        navigationController?.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {

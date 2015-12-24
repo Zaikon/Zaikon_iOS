@@ -10,7 +10,7 @@ import UIKit
 
 class GoodsEditViewController: UIViewController {
     var goods: Goods!
-    var goodsEditView: GoodsEditView
+    var goodsEditView: GoodsEditView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,14 @@ class GoodsEditViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        self.navigationItem.title  = goods.name
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
     }
 
 
