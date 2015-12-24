@@ -14,6 +14,23 @@ class CurrentUser: NSObject {
     
     var name: String!
     var id: Int!
-    var oauthToke: String?
+    var authToken: String?
+    var email: String!
 
+    func hasOauthToken() -> Bool {
+        let userDefaluts = NSUserDefaults.standardUserDefaults()
+        let userData = userDefaluts.objectForKey("userDate")
+        if (userData != nil) &&  (userData!["autoToken"] != nil)
+        {
+            // set　されている
+            name = userData!["name"] as! String
+            id = userData!["id"] as! Int
+            authToken = userData!["authToken"] as? String
+            email = userData!["email"] as? String
+            return false
+        }
+        //　set されていない
+        return true
+
+    }
 }

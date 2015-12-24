@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     var loginView: LoginView!
     var loginFormView: LoginViewForm!
     var signFormView: SignUpViewForm!
+    var currentUser = CurrentUser.sharedCurrentUser
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +59,12 @@ class LoginViewController: UIViewController {
             "email": email!,
             "password": password!
         ]
+        
+        print("hoge")
         let user = User(attribute: attribute)
         user.login { () -> Void in
-            print("hoge")
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
         }
     }
     
@@ -79,7 +83,9 @@ class LoginViewController: UIViewController {
         
         let user = User(attribute: attribute)
         user.signUp { () -> Void in
-            print("hoge")
+            user.login({ () -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
         }
 
     }
