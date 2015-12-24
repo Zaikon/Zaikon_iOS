@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7aZ-KO-IIe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XF8-Na-ygH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -21,9 +21,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="6tq-qp-gka"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <segue destination="0OW-QO-b9p" kind="presentation" identifier="ShowLoginView" id="1s9-2X-zcF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,7 +44,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPu-O8-zhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655.5" y="464.5"/>
+            <point key="canvasLocation" x="711.5" y="1286.5"/>
+        </scene>
+        <!--Login Or Category View Controller-->
+        <scene sceneID="PM3-Xt-odI">
+            <objects>
+                <viewController id="XF8-Na-ygH" customClass="LoginOrCategoryViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hxk-O5-lly"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Gb-lG-6RJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dlR-RH-hbO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="7aZ-KO-IIe" kind="show" identifier="ShowCategoryViewController" id="C15-aD-Ivn"/>
+                        <segue destination="0OW-QO-b9p" kind="presentation" identifier="ShowLoginViewController" id="Pwu-Un-yT1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sad-tY-1DY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.5" y="749.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hol-Gq-2hr">

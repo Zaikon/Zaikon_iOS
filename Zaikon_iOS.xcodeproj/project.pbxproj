@@ -16,6 +16,7 @@
 		D71D84951C2662640012DCA7 /* PersonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D71D84941C2662640012DCA7 /* PersonIcon.png */; };
 		D71D84981C26C06D0012DCA7 /* allow.png in Resources */ = {isa = PBXBuildFile; fileRef = D71D84971C26C06D0012DCA7 /* allow.png */; };
 		D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */; };
+		D751B1041C2CA14300BC5855 /* LoginOrCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751B1031C2CA14300BC5855 /* LoginOrCategoryViewController.swift */; };
 		D761DD3F1C21D0C6008C09CB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761DD3E1C21D0C6008C09CB /* UIColor+Extension.swift */; };
 		D77910071C251B04001F288B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77910061C251B04001F288B /* User.swift */; };
 		D77910091C251C69001F288B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77910081C251C69001F288B /* LoginView.swift */; };
@@ -79,6 +80,7 @@
 		D71D84941C2662640012DCA7 /* PersonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PersonIcon.png; sourceTree = "<group>"; };
 		D71D84971C26C06D0012DCA7 /* allow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allow.png; sourceTree = "<group>"; };
 		D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCollectionView.swift; sourceTree = "<group>"; };
+		D751B1031C2CA14300BC5855 /* LoginOrCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOrCategoryViewController.swift; sourceTree = "<group>"; };
 		D761DD3E1C21D0C6008C09CB /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D77910061C251B04001F288B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D77910081C251C69001F288B /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		D75CCA9B1C128F4800227B18 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D751B1031C2CA14300BC5855 /* LoginOrCategoryViewController.swift */,
 				D79DE73D1C23D82400CC1C7E /* Login */,
 				D79DE73E1C23D83800CC1C7E /* Index */,
 				D79DE73F1C23D84600CC1C7E /* Show */,
@@ -546,6 +549,7 @@
 				D79DE7441C23D91D00CC1C7E /* GoodsDetailViewController.swift in Sources */,
 				D779105C1C25CD69001F288B /* SignUpViewForm.swift in Sources */,
 				D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */,
+				D751B1041C2CA14300BC5855 /* LoginOrCategoryViewController.swift in Sources */,
 				D7F32C3B1C22D9CB00B64BB4 /* CustomNavagationBar.swift in Sources */,
 				D79DE7381C23D73000CC1C7E /* GoodsDetailView.swift in Sources */,
 				D761DD3F1C21D0C6008C09CB /* UIColor+Extension.swift in Sources */,

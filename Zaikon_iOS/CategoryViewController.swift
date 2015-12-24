@@ -16,24 +16,14 @@ class CategoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if currenUser.hasOauthToken() {
-            //　持っている
-            categoryStocks.fetchCategories { () -> Void in
-                self.collectViewController()
-                let pageMenu = CAPSPageMenu.makeCustomPageMenu(self, controllerArray: self.controllerArray)
-                self.addChildViewController(pageMenu)
-                self.view.addSubview(pageMenu.view)
-                pageMenu.didMoveToParentViewController(self)
-            }
-        } else {
-            //　持っていない
-            self.performSegueWithIdentifier("ShowLoginView", sender: self)
+        categoryStocks.fetchCategories { () -> Void in
+            self.collectViewController()
+            let pageMenu = CAPSPageMenu.makeCustomPageMenu(self, controllerArray: self.controllerArray)
+            self.addChildViewController(pageMenu)
+            self.view.addSubview(pageMenu.view)
+            pageMenu.didMoveToParentViewController(self)
         }
+
     }
     
     override func viewWillAppear(animated: Bool) {
