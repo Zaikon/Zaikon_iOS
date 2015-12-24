@@ -14,6 +14,7 @@ class GoodsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print(goods)
         goodsDetailView = GoodsDetailView.instance()
         goodsDetailView.frame = self.view.frame
@@ -40,7 +41,7 @@ class GoodsDetailViewController: UIViewController {
     func settingBtnTapped(sender: UIButton) {
         let alertController = UIAlertController(title: "Setting Option", message: nil, preferredStyle: .ActionSheet)
         let editAction = UIAlertAction(title: "Edit", style: .Default) { (action: UIAlertAction!) -> Void in
-            print("edit")
+            self.performSegueWithIdentifier("ShowGoodsEditViewController", sender: self)
         }
         let deleteAction = UIAlertAction(title: "Delete", style: .Destructive) { (action: UIAlertAction!) -> Void in
             print("delete")
@@ -52,5 +53,10 @@ class GoodsDetailViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let goodsEditViewController = segue.destinationViewController as! GoodsEditViewController
+        goodsEditViewController.goods = self.goods
     }
 }

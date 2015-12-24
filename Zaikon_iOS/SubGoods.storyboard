@@ -43,29 +43,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="w1I-mY-j7F" kind="show" identifier="ShowGoodsEditViewController" id="sxT-v9-9RK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4N-0h-65S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="720.5" y="97.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Goods Edit View Controller-->
         <scene sceneID="Fsa-l1-Iyz">
             <objects>
-                <viewController id="w1I-mY-j7F" sceneMemberID="viewController">
+                <viewController id="w1I-mY-j7F" customClass="GoodsEditViewController" customModule="Zaikon_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eqh-lq-QnP"/>
                         <viewControllerLayoutGuide type="bottom" id="9Sg-1Q-caQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hNL-c9-bTM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rc1-uI-459" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="64"/>
+            <point key="canvasLocation" x="1225.5" y="91.5"/>
         </scene>
     </scenes>
 </document>

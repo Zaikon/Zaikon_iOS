@@ -17,6 +17,7 @@
 		D71D84981C26C06D0012DCA7 /* allow.png in Resources */ = {isa = PBXBuildFile; fileRef = D71D84971C26C06D0012DCA7 /* allow.png */; };
 		D731DEA01C211F0F000F3A24 /* GoodsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */; };
 		D751B1041C2CA14300BC5855 /* LoginOrCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751B1031C2CA14300BC5855 /* LoginOrCategoryViewController.swift */; };
+		D751B1091C2CA36E00BC5855 /* GoodsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751B1081C2CA36E00BC5855 /* GoodsEditViewController.swift */; };
 		D761DD3F1C21D0C6008C09CB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761DD3E1C21D0C6008C09CB /* UIColor+Extension.swift */; };
 		D77910071C251B04001F288B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77910061C251B04001F288B /* User.swift */; };
 		D77910091C251C69001F288B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77910081C251C69001F288B /* LoginView.swift */; };
@@ -39,6 +40,8 @@
 		D7A13EDA1C10B2A800D1F963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A13ED81C10B2A800D1F963 /* LaunchScreen.storyboard */; };
 		D7A13EE51C10B2A800D1F963 /* Zaikon_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13EE41C10B2A800D1F963 /* Zaikon_iOSTests.swift */; };
 		D7A13EF01C10B2A800D1F963 /* Zaikon_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A13EEF1C10B2A800D1F963 /* Zaikon_iOSUITests.swift */; };
+		D7ADEE071C2CA798001316F9 /* GoodsEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADEE061C2CA798001316F9 /* GoodsEditView.swift */; };
+		D7ADEE091C2CA7AD001316F9 /* GoodsEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7ADEE081C2CA7AD001316F9 /* GoodsEditView.xib */; };
 		D7AF5EFA1C17E99400FC20DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */; };
 		D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */; };
 		D7B2EAA61C24BBA300BC723D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B2EAA51C24BBA300BC723D /* UIImageView+Extension.swift */; };
@@ -81,6 +84,7 @@
 		D71D84971C26C06D0012DCA7 /* allow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allow.png; sourceTree = "<group>"; };
 		D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsCollectionView.swift; sourceTree = "<group>"; };
 		D751B1031C2CA14300BC5855 /* LoginOrCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOrCategoryViewController.swift; sourceTree = "<group>"; };
+		D751B1081C2CA36E00BC5855 /* GoodsEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsEditViewController.swift; sourceTree = "<group>"; };
 		D761DD3E1C21D0C6008C09CB /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D77910061C251B04001F288B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D77910081C251C69001F288B /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		D7A13EEB1C10B2A800D1F963 /* Zaikon_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zaikon_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A13EEF1C10B2A800D1F963 /* Zaikon_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zaikon_iOSUITests.swift; sourceTree = "<group>"; };
 		D7A13EF11C10B2A800D1F963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7ADEE061C2CA798001316F9 /* GoodsEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsEditView.swift; sourceTree = "<group>"; };
+		D7ADEE081C2CA7AD001316F9 /* GoodsEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsEditView.xib; sourceTree = "<group>"; };
 		D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zaikon_icon.gif; sourceTree = "<group>"; };
 		D7B2EAA51C24BBA300BC723D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -156,6 +162,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D751B1061C2CA30000BC5855 /* goodsEdit */ = {
+			isa = PBXGroup;
+			children = (
+				D751B1081C2CA36E00BC5855 /* GoodsEditViewController.swift */,
+			);
+			name = goodsEdit;
+			sourceTree = "<group>";
+		};
+		D751B1071C2CA32C00BC5855 /* gooddEdit */ = {
+			isa = PBXGroup;
+			children = (
+				D7ADEE061C2CA798001316F9 /* GoodsEditView.swift */,
+				D7ADEE081C2CA7AD001316F9 /* GoodsEditView.xib */,
+			);
+			name = gooddEdit;
+			sourceTree = "<group>";
+		};
 		D75CCA9A1C128F4300227B18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +196,9 @@
 			children = (
 				D751B1031C2CA14300BC5855 /* LoginOrCategoryViewController.swift */,
 				D79DE73D1C23D82400CC1C7E /* Login */,
-				D79DE73E1C23D83800CC1C7E /* Index */,
-				D79DE73F1C23D84600CC1C7E /* Show */,
+				D79DE73E1C23D83800CC1C7E /* gooodsIndex */,
+				D79DE73F1C23D84600CC1C7E /* goodsShow */,
+				D751B1061C2CA30000BC5855 /* goodsEdit */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -184,8 +208,9 @@
 			children = (
 				D7F32C3A1C22D9CB00B64BB4 /* CustomNavagationBar.swift */,
 				D79DE7401C23D85700CC1C7E /* Login */,
-				D79DE7411C23D87200CC1C7E /* Index */,
-				D79DE7421C23D87800CC1C7E /* Show */,
+				D79DE7411C23D87200CC1C7E /* goodsIndex */,
+				D79DE7421C23D87800CC1C7E /* goodsShow */,
+				D751B1071C2CA32C00BC5855 /* gooddEdit */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -210,21 +235,21 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		D79DE73E1C23D83800CC1C7E /* Index */ = {
+		D79DE73E1C23D83800CC1C7E /* gooodsIndex */ = {
 			isa = PBXGroup;
 			children = (
 				D7A13ED11C10B2A700D1F963 /* CategoryViewController.swift */,
 				D7026AE61C2090AF00C14DEF /* GoodsCollectionViewController.swift */,
 			);
-			name = Index;
+			name = gooodsIndex;
 			sourceTree = "<group>";
 		};
-		D79DE73F1C23D84600CC1C7E /* Show */ = {
+		D79DE73F1C23D84600CC1C7E /* goodsShow */ = {
 			isa = PBXGroup;
 			children = (
 				D79DE7431C23D91D00CC1C7E /* GoodsDetailViewController.swift */,
 			);
-			name = Show;
+			name = goodsShow;
 			sourceTree = "<group>";
 		};
 		D79DE7401C23D85700CC1C7E /* Login */ = {
@@ -240,23 +265,23 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		D79DE7411C23D87200CC1C7E /* Index */ = {
+		D79DE7411C23D87200CC1C7E /* goodsIndex */ = {
 			isa = PBXGroup;
 			children = (
 				D7026AE41C208EDA00C14DEF /* CAPSPageMenu.swift */,
 				D731DE9F1C211F0F000F3A24 /* GoodsCollectionView.swift */,
 				D7D426271C15D5BA00EA6F07 /* GoodsCollectionViewCell.swift */,
 			);
-			name = Index;
+			name = goodsIndex;
 			sourceTree = "<group>";
 		};
-		D79DE7421C23D87800CC1C7E /* Show */ = {
+		D79DE7421C23D87800CC1C7E /* goodsShow */ = {
 			isa = PBXGroup;
 			children = (
 				D79DE7371C23D73000CC1C7E /* GoodsDetailView.swift */,
 				D79DE7391C23D73D00CC1C7E /* GoodsDetailView.xib */,
 			);
-			name = Show;
+			name = goodsShow;
 			sourceTree = "<group>";
 		};
 		D7A13EC31C10B2A700D1F963 = {
@@ -464,6 +489,7 @@
 				D7A13ED51C10B2A700D1F963 /* Main.storyboard in Resources */,
 				D79DE73A1C23D73D00CC1C7E /* GoodsDetailView.xib in Resources */,
 				D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */,
+				D7ADEE091C2CA7AD001316F9 /* GoodsEditView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +565,7 @@
 				D7AF5EFA1C17E99400FC20DF /* LoginViewController.swift in Sources */,
 				D7F32C391C22D84100B64BB4 /* Category.swift in Sources */,
 				D79BF9B51C2A82C600004BA1 /* CurrentUser.swift in Sources */,
+				D7ADEE071C2CA798001316F9 /* GoodsEditView.swift in Sources */,
 				D7F32C3D1C22DB4A00B64BB4 /* Goods.swift in Sources */,
 				D707A9981C23486800BF1771 /* CAPSPageMenu+Extension.swift in Sources */,
 				D7112C231C22C72900BFE40D /* String+Extensition.swift in Sources */,
@@ -550,6 +577,7 @@
 				D779105C1C25CD69001F288B /* SignUpViewForm.swift in Sources */,
 				D7026AE51C208EDA00C14DEF /* CAPSPageMenu.swift in Sources */,
 				D751B1041C2CA14300BC5855 /* LoginOrCategoryViewController.swift in Sources */,
+				D751B1091C2CA36E00BC5855 /* GoodsEditViewController.swift in Sources */,
 				D7F32C3B1C22D9CB00B64BB4 /* CustomNavagationBar.swift in Sources */,
 				D79DE7381C23D73000CC1C7E /* GoodsDetailView.swift in Sources */,
 				D761DD3F1C21D0C6008C09CB /* UIColor+Extension.swift in Sources */,
