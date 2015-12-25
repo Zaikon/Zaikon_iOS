@@ -59,7 +59,6 @@ class User: NSObject {
         
         Alamofire.request(.POST, String.getSignUpUrl(), parameters: attribute)
             .responseJSON { response in
-                print(response.result.value)
                 if response.result.value == nil  {
                     // nil == 成功
                     print("サインアップ処理成功")

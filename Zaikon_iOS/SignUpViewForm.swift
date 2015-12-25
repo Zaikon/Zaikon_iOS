@@ -58,7 +58,7 @@ class SignUpViewForm: UIView, UITextFieldDelegate {
     }
     
     func showKeyBoard(notification: NSNotification) {
-        
+        removeViewButton.enabled = false
         let keyboardRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue
         UIView.animateWithDuration(0.25, animations: {
             self.dockViewHeightConstrain.constant = (keyboardRect?.size.height)!
@@ -68,6 +68,7 @@ class SignUpViewForm: UIView, UITextFieldDelegate {
     
     func hideKeyBoard(notification: NSNotification) {
         
+        removeViewButton.enabled = true
         UIView.animateWithDuration(0.25, animations: {
             self.dockViewHeightConstrain.constant = 10
             self.layoutIfNeeded()

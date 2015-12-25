@@ -30,6 +30,7 @@ class GoodsDetailView: UIView {
         minusBtn.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
     }
     
+    
     func addBorderEffect() {
         bringPartsEffect(titleLabel, color: UIColor.lightGrey(), cornerRadius: 0)
         bringPartsEffect(stockNumLabel, color: UIColor.lightGrey(), cornerRadius: 0)
