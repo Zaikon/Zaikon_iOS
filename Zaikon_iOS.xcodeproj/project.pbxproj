@@ -44,6 +44,7 @@
 		D7ADEE091C2CA7AD001316F9 /* GoodsEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7ADEE081C2CA7AD001316F9 /* GoodsEditView.xib */; };
 		D7ADEE0B1C2CAF11001316F9 /* zaicon_skeleton_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ADEE0A1C2CAF11001316F9 /* zaicon_skeleton_icon.png */; };
 		D7ADEE0D1C2CCCD2001316F9 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADEE0C1C2CCCD2001316F9 /* CALayer+Extension.swift */; };
+		D7ADEE0F1C2D3694001316F9 /* updateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ADEE0E1C2D3694001316F9 /* updateIcon.png */; };
 		D7AF5EFA1C17E99400FC20DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */; };
 		D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */; };
 		D7B2EAA61C24BBA300BC723D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B2EAA51C24BBA300BC723D /* UIImage+Extension.swift */; };
@@ -119,6 +120,7 @@
 		D7ADEE081C2CA7AD001316F9 /* GoodsEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsEditView.xib; sourceTree = "<group>"; };
 		D7ADEE0A1C2CAF11001316F9 /* zaicon_skeleton_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zaicon_skeleton_icon.png; sourceTree = "<group>"; };
 		D7ADEE0C1C2CCCD2001316F9 /* CALayer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		D7ADEE0E1C2D3694001316F9 /* updateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updateIcon.png; sourceTree = "<group>"; };
 		D7AF5EF91C17E99400FC20DF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D7AF5EFF1C17EE0500FC20DF /* zaikon_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zaikon_icon.gif; sourceTree = "<group>"; };
 		D7B2EAA51C24BBA300BC723D /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 		D7AFAEC91C15DBEC001C0063 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				D7ADEE0E1C2D3694001316F9 /* updateIcon.png */,
 				D7ADEE0A1C2CAF11001316F9 /* zaicon_skeleton_icon.png */,
 				D77945C81C28B01600D33B83 /* settings.png */,
 				D71D84971C26C06D0012DCA7 /* allow.png */,
@@ -497,6 +500,7 @@
 				D7AF5F001C17EE0500FC20DF /* zaikon_icon.gif in Resources */,
 				D7ADEE091C2CA7AD001316F9 /* GoodsEditView.xib in Resources */,
 				D7ADEE0B1C2CAF11001316F9 /* zaicon_skeleton_icon.png in Resources */,
+				D7ADEE0F1C2D3694001316F9 /* updateIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

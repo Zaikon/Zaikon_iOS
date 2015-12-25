@@ -27,6 +27,7 @@ class CategoryViewController: UIViewController {
 
     }
     
+    
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -39,6 +40,10 @@ class CategoryViewController: UIViewController {
         navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
         navigationController?.navigationBar.translucent = true
+        
+        categoryStocks.fetchCategories { () -> Void in
+            print("Hoge")
+        }
     }
 
     override func didReceiveMemoryWarning() {
