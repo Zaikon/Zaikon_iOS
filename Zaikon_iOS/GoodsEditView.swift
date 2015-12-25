@@ -34,13 +34,9 @@ class GoodsEditView: UIView, UITextFieldDelegate, UIPickerViewDataSource, UIPick
     }
     
     override func drawRect(rect: CGRect) {
-        print(1)
         setGoodsAttributes()
-        print(2)
         makeViewToBeRounded()
-        print(3)
         underlineTextField()
-        print(4)
         makeToolBar()
     }
     
@@ -96,17 +92,11 @@ class GoodsEditView: UIView, UITextFieldDelegate, UIPickerViewDataSource, UIPick
     
     func setGoodsAttributes() {
         //　値のset
-        print(1)
         imageView.image = UIImage.diplayImageView(goods.image!)
-        print(2)
         nameTextField.text = goods.name
-        print(3)
         unitTextField.text = goods.countingType
-        print(4)
         stockNumTextField.text = String(goods.stockNum)
-        print(5)
         notificationNumTextField.text = String(goods.notificationNum)
-        print(6)
         categoryTextField.text = displayCategory()
     }
     
@@ -158,19 +148,14 @@ class GoodsEditView: UIView, UITextFieldDelegate, UIPickerViewDataSource, UIPick
     }
     
     func displayCategory() -> String {
-        print("Hoge")
         for category in categoryInstance.myCategories {
-            print("Hoge2")
             if goods.category_id == category.id {
-                print("Hoge2")
                 print(category.id)
                 print(category.name)
                 categoryDic["id"] = category.id
                 categoryDic["name"] = category.name
             }
         }
-        print(categoryDic)
-        print(categoryDic["name"])
         return categoryDic["name"] as! String
     }
 

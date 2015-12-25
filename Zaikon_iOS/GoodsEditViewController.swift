@@ -39,6 +39,8 @@ class GoodsEditViewController: UIViewController {
         goodsEditView.updateGoodsAttributes()
         goodsEditView.goods.update() { (goods) -> Void in
             self.goods = goods
+            let viewController = GoodsDetailViewController()
+            viewController.goods = goods
         }
     }
 

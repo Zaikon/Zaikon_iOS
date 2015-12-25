@@ -52,6 +52,24 @@ class LoginViewController: UIViewController {
     
     func tapLoginStartButton(sender: UIButton) {
         
+        if  signFormView.nameTextField.text?.isEmpty != nil && signFormView.emailTextField.text?.isEmpty != nil && signFormView.passwordTextField.text ==  signFormView.passwordConfirmationTextField.text {
+            registerSignUpUser()
+        } else {
+            showAlertView()
+        }
+    }
+    
+    func tapSignUpStartButton(sender: UIButton) {
+        
+        if loginFormView.emailTextField.text?.isEmpty != nil && loginFormView.passwordTextField.text?.isEmpty  != nil {
+        } else {
+            showAlertView()
+        }
+
+    }
+    
+    func registerLoginUser() {
+        
         let email = self.loginFormView.emailTextField.text
         let password = self.loginFormView.passwordTextField.text
         
@@ -60,7 +78,6 @@ class LoginViewController: UIViewController {
             "password": password!
         ]
         
-        print("hoge")
         let user = User(attribute: attribute)
         user.login { () -> Void in
             self.dismissViewControllerAnimated(true, completion: nil)
@@ -68,7 +85,8 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func tapSignUpStartButton(sender: UIButton) {
+    func registerSignUpUser() {
+        
         let name = signFormView.nameTextField.text
         let email = signFormView.emailTextField.text
         let password = signFormView.passwordTextField.text
@@ -87,7 +105,14 @@ class LoginViewController: UIViewController {
                 self.dismissViewControllerAnimated(true, completion: nil)
             })
         }
-
     }
     
- }
+    func showAlertView() {
+        let alertController = UIAlertController(title: "Error", message: "Fill in Your Form", preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(alertAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+ 
+}
