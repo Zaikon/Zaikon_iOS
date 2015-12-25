@@ -51,21 +51,31 @@ class LoginViewController: UIViewController {
     }
     
     func tapLoginStartButton(sender: UIButton) {
-        
-        if  signFormView.nameTextField.text?.isEmpty != nil && signFormView.emailTextField.text?.isEmpty != nil && signFormView.passwordTextField.text ==  signFormView.passwordConfirmationTextField.text {
-            registerSignUpUser()
-        } else {
+        if isEmptyLoginForm() {
             showAlertView()
+        } else {
+            registerLoginUser()
         }
     }
     
     func tapSignUpStartButton(sender: UIButton) {
-        
-        if loginFormView.emailTextField.text?.isEmpty != nil && loginFormView.passwordTextField.text?.isEmpty  != nil {
-        } else {
+
+        if isEmptySignUpForm() {
             showAlertView()
+        } else {
+            registerSignUpUser()
         }
 
+    }
+    
+    func isEmptyLoginForm() -> Bool{
+        print(String.strEmpty(loginFormView.emailTextField.text) && String.strEmpty(loginFormView.passwordTextField.text))
+        return String.strEmpty(loginFormView.emailTextField.text) && String.strEmpty(loginFormView.passwordTextField.text)
+    }
+    
+    func isEmptySignUpForm() -> Bool {
+        let bool: Bool = String.strEmpty(signFormView.nameTextField.text) && String.strEmpty(signFormView.emailTextField.text) && String.strEmpty(signFormView.passwordTextField.text) &&  String.strEmpty(signFormView.passwordConfirmationTextField.text) && signFormView.passwordTextField.text == signFormView.passwordConfirmationTextField.text
+        return bool
     }
     
     func registerLoginUser() {
@@ -108,6 +118,7 @@ class LoginViewController: UIViewController {
     }
     
     func showAlertView() {
+        
         let alertController = UIAlertController(title: "Error", message: "Fill in Your Form", preferredStyle: .Alert)
         let alertAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(alertAction)

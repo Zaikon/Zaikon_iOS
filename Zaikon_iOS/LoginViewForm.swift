@@ -25,6 +25,7 @@ class LoginViewForm: UIView, UITextFieldDelegate {
     }
     
     func setViewEffect() {
+        
         loginForm.layer.cornerRadius = 5
         LoginStartButton.layer.cornerRadius = 8
         showLoginForm()
@@ -45,6 +46,7 @@ class LoginViewForm: UIView, UITextFieldDelegate {
     }
     
     func underlineTextField() {
+        
         CALayer.borderlineTextfield(emailTextField)
         CALayer.borderlineTextfield(passwordTextField)
     }

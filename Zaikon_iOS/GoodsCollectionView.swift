@@ -39,15 +39,18 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
 
     
     func setCollectionView() {
+        
         self.backgroundColor = UIColor.lightGrey()
     }
     
     // collectionView setting
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return (self.goodsArray?.count)!
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GoodsCollectionViewCell", forIndexPath: indexPath) as! GoodsCollectionViewCell
         cell.backgroundColor = UIColor.whiteColor()
         let goods = self.goodsArray![indexPath.item]
@@ -63,6 +66,7 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
         let goods: Goods = goodsArray![indexPath.item]
         self.customDelefgate?.didselectCollectionViewCell(goods)
     }
@@ -71,7 +75,9 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
     //Gesture
     func plusBtnTapped(sender: UIButton) {
         let goods = goodsArray![tag]
+        let num = tag
         goods.countUp { (goods) -> Void in
+            self.goodsArray![num] = goods
             let cell = sender.superview as! GoodsCollectionViewCell
             cell.goodsNumberLabel.text = String(goods.stockNum)
         }
@@ -79,6 +85,7 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
     
     
     func minusBtnTapped(sender: UIButton) {
+        
         let goods = goodsArray![tag]
         goods.countDown { (goods) -> Void in
             let cell = sender.superview as! GoodsCollectionViewCell

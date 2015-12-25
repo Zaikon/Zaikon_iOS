@@ -24,4 +24,15 @@ extension String {
     static func getUserFromToken() -> String {
         return "http://localhost:3000/api/me"
     }
+    
+    static func strEmpty(strText:String?) -> Bool{
+        if(strText == nil){
+            return true
+        }else{
+            if(strText! == ""){
+                return true
+            }
+        }
+        return false
+    }
 }
