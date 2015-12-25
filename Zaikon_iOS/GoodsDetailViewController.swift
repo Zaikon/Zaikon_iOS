@@ -15,14 +15,14 @@ class GoodsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(goods)
         goodsDetailView = GoodsDetailView.instance()
         goodsDetailView.frame = self.view.frame
-        goodsDetailView.goods = goods
         goodsDetailView.settingButton.addTarget(self, action: "settingBtnTapped:", forControlEvents: .TouchUpInside)
         goodsDetailView.addBorderEffect()
+        goodsDetailView.goods = goods
         goodsDetailView.insertGoodsInftormation(goods)
         self.view.addSubview(goodsDetailView)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,5 +62,6 @@ class GoodsDetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let goodsEditViewController = segue.destinationViewController as! GoodsEditViewController
         goodsEditViewController.goods = self.goods
+        goodsEditViewController.parentViewController?.reloadInputViews()
     }
 }

@@ -18,6 +18,8 @@ class GoodsEditViewController: UIViewController {
         goodsEditView = GoodsEditView.instance()
         goodsEditView.frame = self.view.frame
         goodsEditView.goods = goods
+        
+        goodsEditView.updateButton.addTarget(self, action: "tapUpadteButton:", forControlEvents: .TouchUpInside)
         self.view.addSubview(goodsEditView)
     }
 
@@ -31,6 +33,13 @@ class GoodsEditViewController: UIViewController {
         self.navigationItem.title  = goods.name
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
+    }
+    
+    func tapUpadteButton(sender: UIButton) {
+        goodsEditView.updateGoodsAttributes()
+        goodsEditView.goods.update() { (goods) -> Void in
+            self.goods = goods
+        }
     }
 
 

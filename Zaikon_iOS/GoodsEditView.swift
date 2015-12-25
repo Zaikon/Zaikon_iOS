@@ -23,6 +23,9 @@ class GoodsEditView: UIView, UITextFieldDelegate, UIPickerViewDataSource, UIPick
     @IBOutlet weak var dockViewHeightConstrain: NSLayoutConstraint!
     
     var goods: Goods!
+    var categoryDic = [String: AnyObject]()
+    
+    
     var categoryInstance = CategoryStocks.sharedCategory
     let toolBar = UIToolbar()
     
@@ -31,9 +34,13 @@ class GoodsEditView: UIView, UITextFieldDelegate, UIPickerViewDataSource, UIPick
     }
     
     override func drawRect(rect: CGRect) {
+        print(1)
         setGoodsAttributes()
+        print(2)
         makeViewToBeRounded()
+        print(3)
         underlineTextField()
+        print(4)
         makeToolBar()
     }
     
@@ -89,12 +96,28 @@ class GoodsEditView: UIView, UITextFieldDelegate, UIPickerViewDataSource, UIPick
     
     func setGoodsAttributes() {
         //　値のset
+        print(1)
         imageView.image = UIImage.diplayImageView(goods.image!)
+        print(2)
         nameTextField.text = goods.name
+        print(3)
         unitTextField.text = goods.countingType
+        print(4)
         stockNumTextField.text = String(goods.stockNum)
+        print(5)
         notificationNumTextField.text = String(goods.notificationNum)
+        print(6)
         categoryTextField.text = displayCategory()
+    }
+    
+    func updateGoodsAttributes() {
+        
+        goods.name = nameTextField.text
+        goods.countingType = unitTextField.text
+        goods.stockNum = Int(stockNumTextField.text!)
+        goods.notificationNum = Int(notificationNumTextField.text!)
+        goods.category_id = categoryDic["id"] as! Int
+        
     }
     
     func makeViewToBeRounded() {
@@ -135,14 +158,22 @@ class GoodsEditView: UIView, UITextFieldDelegate, UIPickerViewDataSource, UIPick
     }
     
     func displayCategory() -> String {
-        var categoryName: String!
+        print("Hoge")
         for category in categoryInstance.myCategories {
+            print("Hoge2")
             if goods.category_id == category.id {
-                categoryName = category.name
+                print("Hoge2")
+                print(category.id)
+                print(category.name)
+                categoryDic["id"] = category.id
+                categoryDic["name"] = category.name
             }
         }
-        return categoryName
+        print(categoryDic)
+        print(categoryDic["name"])
+        return categoryDic["name"] as! String
     }
+
     
     // toolbar
     func makeToolBar() {

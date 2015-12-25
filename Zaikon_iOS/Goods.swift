@@ -23,6 +23,7 @@ class Goods: NSObject {
     var categoryStocks = CategoryStocks.sharedCategory
     
     class func createArrayFromJson(arrayJson: JSON) -> Array<Goods> {
+        
         var goodsArray: [Goods] = []
         arrayJson.forEach({ (_, json) in
             let goods = Goods(attribute: json)
@@ -32,6 +33,7 @@ class Goods: NSObject {
     }
     
     init(attribute: JSON) {
+        
         self.id = attribute["id"].int
         self.name = attribute["name"].string
         self.stockNum = attribute["stock_num"].int
@@ -43,6 +45,7 @@ class Goods: NSObject {
     }
     
     func countUp(callback: (goods: Goods) -> Void ) {
+       
         Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id)/count_up")
             .responseJSON { response in
                 guard let object = response.result.value else {
@@ -55,6 +58,7 @@ class Goods: NSObject {
     }
     
     func countDown(callback: (goods: Goods) -> Void ) {
+        
         Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id)/count_down")
             .responseJSON { response in
                 guard let object = response.result.value else {
@@ -65,5 +69,26 @@ class Goods: NSObject {
                 callback(goods: goods) 
         }
         
+    }
+    
+    func update(afterUpdate: (goods: Goods) -> Void ) {
+        let attributes: [String: AnyObject] = [
+            "id": self.id,
+            "name": self.name,
+            "stock_num": self.stockNum,
+            "notification_num": self.notificationNum,
+            "category_id": self.category_id,
+            "counting_type": self.countingType,
+        ]
+        
+        Alamofire.request(.PUT, String.getRootApiUrl() + "/api/goods/\(self.id)", parameters: attributes)
+            .responseJSON { response in
+                guard let object = response.result.value else {
+                    print("check host server statred")
+                    return
+                }
+                let goods = Goods(attribute: JSON(object))
+                afterUpdate(goods: goods)
+        }
     }
 }
