@@ -22,7 +22,7 @@
                                 <constraint firstAttribute="width" secondItem="e2I-Ln-QHa" secondAttribute="height" id="jw3-Ja-R8X"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="hogehoge" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-RD-ASD">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例: お茶" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-RD-ASD">
                             <rect key="frame" x="8" y="67" width="231.5" height="30"/>
                             <animations/>
                             <constraints>
@@ -80,7 +80,7 @@
                             <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="fugafuga" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LeH-Uv-XjU">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例: 冊" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LeH-Uv-XjU">
                             <rect key="frame" x="8" y="47" width="343" height="31.5"/>
                             <animations/>
                             <constraints>
@@ -89,25 +89,25 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="hogehoge" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxd-9p-hke">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例: 10" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxd-9p-hke">
                             <rect key="frame" x="8" y="125" width="343" height="31"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="kxd-9p-hke" secondAttribute="height" multiplier="11:1" id="hsR-hX-Mwg"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="hogehogehoge" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-zu-1qh">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例: 5" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-zu-1qh">
                             <rect key="frame" x="8" y="204" width="343" height="31"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="TgO-zu-1qh" secondAttribute="height" multiplier="11:1" id="GdO-bA-IMI"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="aleale" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEW-SM-1l1">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="例: Drink" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEW-SM-1l1">
                             <rect key="frame" x="8" y="282" width="343" height="31.5"/>
                             <animations/>
                             <constraints>
@@ -185,18 +185,19 @@
             <constraints>
                 <constraint firstItem="6gX-AV-hNc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="A6v-BH-VUo"/>
                 <constraint firstAttribute="trailing" secondItem="P3t-Qj-bUN" secondAttribute="trailing" constant="8" id="DMh-mg-3nm"/>
-                <constraint firstItem="hqG-XZ-lLK" firstAttribute="top" secondItem="6gX-AV-hNc" secondAttribute="bottom" constant="20" id="F1F-A9-pQq"/>
-                <constraint firstItem="P3t-Qj-bUN" firstAttribute="top" secondItem="hqG-XZ-lLK" secondAttribute="bottom" constant="30" id="FYp-Go-0xf"/>
+                <constraint firstItem="P3t-Qj-bUN" firstAttribute="top" secondItem="hqG-XZ-lLK" secondAttribute="bottom" constant="30" id="M4N-hm-LDH"/>
                 <constraint firstItem="6gX-AV-hNc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Tbt-f4-ST7"/>
                 <constraint firstItem="hqG-XZ-lLK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Tpe-LF-jT4"/>
                 <constraint firstAttribute="trailing" secondItem="6gX-AV-hNc" secondAttribute="trailing" constant="8" id="e5g-2e-xXY"/>
                 <constraint firstItem="P3t-Qj-bUN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="qMv-PH-I1k"/>
                 <constraint firstAttribute="trailing" secondItem="hqG-XZ-lLK" secondAttribute="trailing" constant="8" id="tJF-ds-xSV"/>
+                <constraint firstItem="hqG-XZ-lLK" firstAttribute="top" secondItem="6gX-AV-hNc" secondAttribute="bottom" constant="20" id="xu9-66-gfC"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
                 <outlet property="basicInfoBackground" destination="hqG-XZ-lLK" id="hGm-yb-p7p"/>
                 <outlet property="categoryTextField" destination="sEW-SM-1l1" id="42k-Xl-kER"/>
+                <outlet property="dockViewHeightConstrain" destination="xu9-66-gfC" id="vFC-9P-PfP"/>
                 <outlet property="imageView" destination="e2I-Ln-QHa" id="WqT-pU-yGx"/>
                 <outlet property="nameTextField" destination="I9K-RD-ASD" id="lsJ-iS-BXb"/>
                 <outlet property="notificationNumTextField" destination="TgO-zu-1qh" id="WPe-JH-vby"/>

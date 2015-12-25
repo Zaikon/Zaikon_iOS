@@ -46,7 +46,7 @@ class GoodsDetailView: UIView {
     
     
     func insertGoodsInftormation(goods: Goods) {
-        goodsImageView.image = UIImageView.diplayImageView(goods.image!)
+        goodsImageView.image = UIImage.diplayImageView(goods.image!)
         titleLabel.text = goods.name
         stockNumLabel.text = "\(goods.stockNum) \(goods.countingType)"
         notificationNumLabel.text = "通知在庫数: \(goods.notificationNum)"

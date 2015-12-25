@@ -11,7 +11,8 @@ import UIKit
 class CategoryViewController: UIViewController {
     var pageMenu : CAPSPageMenu?
     var controllerArray : [UIViewController] = []
-    var categoryStocks = CategoryStocks.sharedInstance
+    var categoryStocks = CategoryStocks.sharedCategory
+    
     var currenUser = CurrentUser.sharedCurrentUser
 
     override func viewDidLoad() {

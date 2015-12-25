@@ -20,7 +20,7 @@ class Goods: NSObject {
     var category_id: Int!
     var countingType: String!
     
-    var categoryStocks = CategoryStocks.sharedInstance
+    var categoryStocks = CategoryStocks.sharedCategory
     
     class func createArrayFromJson(arrayJson: JSON) -> Array<Goods> {
         var goodsArray: [Goods] = []

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIImageView {
+extension UIImage {
     
     class func diplayImageView(imageURL:String) -> UIImage {
         let url = NSURL(string: imageURL)

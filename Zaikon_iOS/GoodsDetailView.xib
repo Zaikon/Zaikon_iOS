@@ -70,11 +70,11 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7d-pt-nnm">
-                            <rect key="frame" x="345" y="10" width="20" height="20"/>
+                            <rect key="frame" x="335" y="10" width="30" height="30"/>
                             <animations/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="20" id="AdW-Nl-qGe"/>
-                                <constraint firstAttribute="width" constant="20" id="wBG-8R-c09"/>
+                                <constraint firstAttribute="height" constant="30" id="AdW-Nl-qGe"/>
+                                <constraint firstAttribute="width" constant="30" id="wBG-8R-c09"/>
                             </constraints>
                             <state key="normal" title="Button" image="settings.png"/>
                         </button>
