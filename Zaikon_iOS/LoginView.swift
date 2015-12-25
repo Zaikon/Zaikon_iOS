@@ -18,6 +18,7 @@ class LoginView: UIView {
     }
     
     func setViewEffect() {
+        
         UIView.setGradationView(self)
         loginButton.layer.cornerRadius = 5
         signUpButton.layer.cornerRadius = 5
