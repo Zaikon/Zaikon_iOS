@@ -16,7 +16,9 @@ class GoodsEditViewController: UIViewController {
         super.viewDidLoad()
         
         goodsEditView = GoodsEditView.instance()
-        
+        goodsEditView.frame = self.view.frame
+        goodsEditView.goods = goods
+        self.view.addSubview(goodsEditView)
     }
 
     override func didReceiveMemoryWarning() {

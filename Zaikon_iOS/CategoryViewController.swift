@@ -30,9 +30,11 @@ class CategoryViewController: UIViewController {
         
         super.viewWillAppear(animated)
         let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+//        let titleImageView = setNavigationImageView()
 
-        navigationItem.title = "ザイコン"
+        
         navigationItem.backBarButtonItem = backButtonItem
+//        navigationItem.titleView = titleImageView
         navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
         navigationController?.navigationBar.translucent = true
@@ -53,5 +55,13 @@ class CategoryViewController: UIViewController {
             controllerArray.append(controller)
         }
     }
+    
+//    func setNavigationImageView() -> UIImageView {
+//        let titleImageView = UIImageView(image: UIImage(named: "zaicon_skeleton_icon"))
+//        titleImageView.frame.size = CGSizeMake(10, 10)
+//        titleImageView.center.x = self.view.center.x
+//        titleImageView.frame.origin.y = 20
+//        return titleImageView
+//    }
 }
 
