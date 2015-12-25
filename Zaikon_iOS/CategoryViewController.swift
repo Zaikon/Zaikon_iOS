@@ -11,38 +11,34 @@ import UIKit
 class CategoryViewController: UIViewController {
     var pageMenu : CAPSPageMenu?
     var controllerArray : [UIViewController] = []
-    var categoryStocks = CategoryStocks.sharedInstance
+    var categoryStocks = CategoryStocks.sharedCategory
+    
     var currenUser = CurrentUser.sharedCurrentUser
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if currenUser.hasOauthToken() {
-            //　持っている
-            categoryStocks.fetchCategories { () -> Void in
-                self.collectViewController()
-                let pageMenu = CAPSPageMenu.makeCustomPageMenu(self, controllerArray: self.controllerArray)
-                self.addChildViewController(pageMenu)
-                self.view.addSubview(pageMenu.view)
-                pageMenu.didMoveToParentViewController(self)
-            }
-        } else {
-            //　持っていない
-            self.performSegueWithIdentifier("ShowLoginView", sender: self)
+        categoryStocks.fetchCategories { () -> Void in
+            self.collectViewController()
+            let pageMenu = CAPSPageMenu.makeCustomPageMenu(self, controllerArray: self.controllerArray)
+            self.addChildViewController(pageMenu)
+            self.view.addSubview(pageMenu.view)
+            pageMenu.didMoveToParentViewController(self)
         }
+
     }
     
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.navigationItem.title = "ザイコン"
-        self.navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
-        self.navigationController?.navigationBar.translucent = true
+        let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+//        let titleImageView = setNavigationImageView()
+
+        
+        navigationItem.backBarButtonItem = backButtonItem
+//        navigationItem.titleView = titleImageView
+        navigationController!.navigationBar.barTintColor = UIColor.lightBlue()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 25)!]
+        navigationController?.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,5 +56,13 @@ class CategoryViewController: UIViewController {
             controllerArray.append(controller)
         }
     }
+    
+//    func setNavigationImageView() -> UIImageView {
+//        let titleImageView = UIImageView(image: UIImage(named: "zaicon_skeleton_icon"))
+//        titleImageView.frame.size = CGSizeMake(10, 10)
+//        titleImageView.center.x = self.view.center.x
+//        titleImageView.frame.origin.y = 20
+//        return titleImageView
+//    }
 }
 

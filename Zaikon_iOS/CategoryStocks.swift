@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class CategoryStocks: NSObject {
     var myCategories: [Category] = []
-    static let sharedInstance = CategoryStocks()
+    static let sharedCategory = CategoryStocks()
     
     func fetchCategories(callback: () -> Void ) {
         Alamofire.request(.GET, String.getRootApiUrl() + "/api/categories")
@@ -27,7 +27,7 @@ class CategoryStocks: NSObject {
                     category.id = json["id"].int
                     category.name = json["name"].string
                     category.goods = Goods.createArrayFromJson(json["goods"])
-                    CategoryStocks.sharedInstance.myCategories.append(category)
+                    CategoryStocks.sharedCategory.myCategories.append(category)
                 }
                 callback()
         }

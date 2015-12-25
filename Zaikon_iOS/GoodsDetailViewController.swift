@@ -14,14 +14,15 @@ class GoodsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(goods)
+        
         goodsDetailView = GoodsDetailView.instance()
         goodsDetailView.frame = self.view.frame
-        goodsDetailView.goods = goods
         goodsDetailView.settingButton.addTarget(self, action: "settingBtnTapped:", forControlEvents: .TouchUpInside)
         goodsDetailView.addBorderEffect()
+        goodsDetailView.goods = goods
         goodsDetailView.insertGoodsInftormation(goods)
         self.view.addSubview(goodsDetailView)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,15 +33,19 @@ class GoodsDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        self.navigationItem.title  = goods.name
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
+        
+        let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        navigationItem.title  = goods.name
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationItem.backBarButtonItem = backButtonItem
+        navigationController?.navigationBar.translucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!]
     }
     
     func settingBtnTapped(sender: UIButton) {
         let alertController = UIAlertController(title: "Setting Option", message: nil, preferredStyle: .ActionSheet)
         let editAction = UIAlertAction(title: "Edit", style: .Default) { (action: UIAlertAction!) -> Void in
-            print("edit")
+            self.performSegueWithIdentifier("ShowGoodsEditViewController", sender: self)
         }
         let deleteAction = UIAlertAction(title: "Delete", style: .Destructive) { (action: UIAlertAction!) -> Void in
             print("delete")
@@ -52,5 +57,11 @@ class GoodsDetailViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let goodsEditViewController = segue.destinationViewController as! GoodsEditViewController
+        goodsEditViewController.goods = self.goods
+        goodsEditViewController.parentViewController?.reloadInputViews()
     }
 }

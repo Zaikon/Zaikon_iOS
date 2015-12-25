@@ -28,6 +28,7 @@ class LoginViewForm: UIView, UITextFieldDelegate {
         loginForm.layer.cornerRadius = 5
         LoginStartButton.layer.cornerRadius = 8
         showLoginForm()
+        underlineTextField()
     }
     
     override func awakeFromNib() {
@@ -42,6 +43,13 @@ class LoginViewForm: UIView, UITextFieldDelegate {
         notificationCenter.addObserver(self, selector: "showKeyBoard:", name: UIKeyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: "hideKeyBoard:", name:UIKeyboardWillHideNotification, object: nil)
     }
+    
+    func underlineTextField() {
+        CALayer.borderlineTextfield(emailTextField)
+        CALayer.borderlineTextfield(passwordTextField)
+    }
+
+    
     
     func showKeyBoard(notification: NSNotification) {
         

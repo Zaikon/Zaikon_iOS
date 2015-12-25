@@ -70,11 +70,11 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7d-pt-nnm">
-                            <rect key="frame" x="345" y="10" width="20" height="20"/>
+                            <rect key="frame" x="335" y="10" width="30" height="30"/>
                             <animations/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="20" id="AdW-Nl-qGe"/>
-                                <constraint firstAttribute="width" constant="20" id="wBG-8R-c09"/>
+                                <constraint firstAttribute="height" constant="30" id="AdW-Nl-qGe"/>
+                                <constraint firstAttribute="width" constant="30" id="wBG-8R-c09"/>
                             </constraints>
                             <state key="normal" title="Button" image="settings.png"/>
                         </button>
@@ -139,7 +139,7 @@
                 <outlet property="stockNumLabel" destination="WQI-CL-JB6" id="AAZ-Ka-rje"/>
                 <outlet property="titleLabel" destination="TO9-CD-Wm1" id="ke3-Uu-mYb"/>
             </connections>
-            <point key="canvasLocation" x="406.5" y="204.5"/>
+            <point key="canvasLocation" x="398.5" y="176.5"/>
         </view>
     </objects>
     <resources>

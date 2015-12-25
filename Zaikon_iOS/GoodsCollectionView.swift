@@ -54,7 +54,7 @@ class GoodsCollectionView: UICollectionView, UICollectionViewDelegate, UICollect
         
         cell.goodsNumberLabel.text = String(goods.stockNum)
         cell.unitLabel.text = goods.countingType
-        cell.goodsImageView.image = UIImageView.diplayImageView(goods.image!)
+        cell.goodsImageView.image = UIImage.diplayImageView(goods.image!)
         cell.plusButton.addTarget(self, action: "plusBtnTapped:", forControlEvents: .TouchUpInside)
         cell.minusButton.addTarget(self, action: "minusBtnTapped:", forControlEvents: .TouchUpInside)
         cell.plusButton.tag = indexPath.item
